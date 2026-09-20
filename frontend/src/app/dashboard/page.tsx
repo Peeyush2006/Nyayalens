@@ -232,6 +232,14 @@ export default function DashboardPage() {
                 <FileDiff className="w-4 h-4 text-slate-300" />
                 <span>Compare Contracts</span>
               </button>
+
+              <button
+                onClick={() => setShowObservability(true)}
+                className="inline-flex items-center justify-center space-x-2 px-5 py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-emerald-300 text-xs sm:text-sm font-medium transition-colors border border-slate-700"
+              >
+                <Activity className="w-4 h-4 text-emerald-400" />
+                <span>AI Observability (99.7%)</span>
+              </button>
             </div>
           </div>
         </div>
