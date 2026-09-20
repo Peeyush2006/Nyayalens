@@ -1,0 +1,1516 @@
+{
+  "docs": [
+    {
+      "id": "doc-demo-employment",
+      "filename": "TechFlow_Lead_Architect_Employment_Agreement.pdf",
+      "file_type": "pdf",
+      "file_size": 5517,
+      "page_count": 10,
+      "uploaded_at": "2026-09-21 00:53",
+      "doc_type": "Employment Contract",
+      "parties": [
+        "TechFlow Solutions Private Limited",
+        "Mr. Aditya Verma"
+      ],
+      "effective_date": "1st October 2024",
+      "governing_law": "Laws of India (Bangalore jurisdiction)",
+      "jurisdiction": "India",
+      "dispute_mechanism": "Arbitration / Designated Courts",
+      "executive_summary": "This is a legally binding Employment Contract entered into by TechFlow Solutions Private Limited and Mr. Aditya Verma. Key provisions govern obligations, payment schedules, notice periods, and restrictive covenants. Overall Risk Profile is evaluated at 96/100 with emphasis on termination and liability limits.",
+      "plain_language_summary": "In simple terms, this Employment Contract defines what each party must deliver and what happens if something goes wrong. Be particularly mindful of the termination notice period and any indemnity commitments before signing.",
+      "hinglish_summary": "Aasan shabdon mein, yeh Employment Contract TechFlow Solutions Private Limited and Mr. Aditya Verma ke beech ki zimmedariyon ko tay karta hai. Sign karne se pehle termination notice period, security deposit, aur indemnity clauses ko dhyan se samajh lein.",
+      "risk_score": 96,
+      "risk_breakdown": {
+        "Critical": 2,
+        "High Attention": 3,
+        "Moderate": 0,
+        "Informational": 0
+      }
+    },
+    {
+      "id": "doc-demo-rental",
+      "filename": "Palm_Springs_Residential_Lease_Agreement.pdf",
+      "file_type": "pdf",
+      "file_size": 3114,
+      "page_count": 6,
+      "uploaded_at": "2026-09-21 00:53",
+      "doc_type": "Rental Agreement",
+      "parties": [
+        "Mr. Rajesh Malhotra (Lessor)",
+        "Ms. Priya Sharma (Lessee)"
+      ],
+      "effective_date": "1st December 2024",
+      "governing_law": "Laws of India (Gurgaon, Haryana)",
+      "jurisdiction": "India",
+      "dispute_mechanism": "Arbitration / Designated Courts",
+      "executive_summary": "This is a legally binding Rental Agreement entered into by Mr. Rajesh Malhotra (Lessor) and Ms. Priya Sharma (Lessee). Key provisions govern obligations, payment schedules, notice periods, and restrictive covenants. Overall Risk Profile is evaluated at 39/100 with emphasis on termination and liability limits.",
+      "plain_language_summary": "In simple terms, this Rental Agreement defines what each party must deliver and what happens if something goes wrong. Be particularly mindful of the termination notice period and any indemnity commitments before signing.",
+      "hinglish_summary": "Aasan shabdon mein, yeh Rental Agreement Mr. Rajesh Malhotra (Lessor) and Ms. Priya Sharma (Lessee) ke beech ki zimmedariyon ko tay karta hai. Sign karne se pehle termination notice period, security deposit, aur indemnity clauses ko dhyan se samajh lein.",
+      "risk_score": 39,
+      "risk_breakdown": {
+        "Critical": 0,
+        "High Attention": 2,
+        "Moderate": 0,
+        "Informational": 1
+      }
+    },
+    {
+      "id": "doc-demo-nda",
+      "filename": "Nexis_BharatFintech_Mutual_NDA.pdf",
+      "file_type": "pdf",
+      "file_size": 2989,
+      "page_count": 1,
+      "uploaded_at": "2026-09-21 00:53",
+      "doc_type": "Non-Disclosure Agreement (NDA)",
+      "parties": [
+        "Nexis AI Inc.",
+        "Bharat FinTech Technologies Pvt Ltd"
+      ],
+      "effective_date": "10th January 2025",
+      "governing_law": "England and Wales / India (ICC Arbitration)",
+      "jurisdiction": "India / Global",
+      "dispute_mechanism": "Arbitration / Designated Courts",
+      "executive_summary": "This is a legally binding Non-Disclosure Agreement (NDA) entered into by Nexis AI Inc. and Bharat FinTech Technologies Pvt Ltd. Key provisions govern obligations, payment schedules, notice periods, and restrictive covenants. Overall Risk Profile is evaluated at 12/100 with emphasis on termination and liability limits.",
+      "plain_language_summary": "In simple terms, this Non-Disclosure Agreement (NDA) defines what each party must deliver and what happens if something goes wrong. Be particularly mindful of the termination notice period and any indemnity commitments before signing.",
+      "hinglish_summary": "Aasan shabdon mein, yeh Non-Disclosure Agreement (NDA) Nexis AI Inc. and Bharat FinTech Technologies Pvt Ltd ke beech ki zimmedariyon ko tay karta hai. Sign karne se pehle termination notice period, security deposit, aur indemnity clauses ko dhyan se samajh lein.",
+      "risk_score": 12,
+      "risk_breakdown": {
+        "Critical": 0,
+        "High Attention": 0,
+        "Moderate": 0,
+        "Informational": 0
+      }
+    },
+    {
+      "id": "doc-demo-saas",
+      "filename": "CloudSphere_Enterprise_SaaS_Agreement.pdf",
+      "file_type": "pdf",
+      "file_size": 3398,
+      "page_count": 7,
+      "uploaded_at": "2026-09-21 00:53",
+      "doc_type": "SaaS Service Agreement",
+      "parties": [
+        "CloudSphere Platforms Ltd",
+        "Vertex Enterprises Limited"
+      ],
+      "effective_date": "1st February 2025",
+      "governing_law": "Laws of India (Mumbai jurisdiction)",
+      "jurisdiction": "India / International",
+      "dispute_mechanism": "Arbitration / Designated Courts",
+      "executive_summary": "This is a legally binding SaaS Service Agreement entered into by CloudSphere Platforms Ltd and Vertex Enterprises Limited. Key provisions govern obligations, payment schedules, notice periods, and restrictive covenants. Overall Risk Profile is evaluated at 42/100 with emphasis on termination and liability limits.",
+      "plain_language_summary": "In simple terms, this SaaS Service Agreement defines what each party must deliver and what happens if something goes wrong. Be particularly mindful of the termination notice period and any indemnity commitments before signing.",
+      "hinglish_summary": "Aasan shabdon mein, yeh SaaS Service Agreement CloudSphere Platforms Ltd and Vertex Enterprises Limited ke beech ki zimmedariyon ko tay karta hai. Sign karne se pehle termination notice period, security deposit, aur indemnity clauses ko dhyan se samajh lein.",
+      "risk_score": 42,
+      "risk_breakdown": {
+        "Critical": 1,
+        "High Attention": 0,
+        "Moderate": 1,
+        "Informational": 1
+      }
+    }
+  ],
+  "details": {
+    "doc-demo-employment": {
+      "id": "doc-demo-employment",
+      "filename": "TechFlow_Lead_Architect_Employment_Agreement.pdf",
+      "file_type": "pdf",
+      "file_size": 5517,
+      "page_count": 10,
+      "uploaded_at": "2026-09-21 00:53",
+      "doc_type": "Employment Contract",
+      "parties": [
+        "TechFlow Solutions Private Limited",
+        "Mr. Aditya Verma"
+      ],
+      "effective_date": "1st October 2024",
+      "governing_law": "Laws of India (Bangalore jurisdiction)",
+      "jurisdiction": "India",
+      "dispute_mechanism": "Arbitration / Designated Courts",
+      "executive_summary": "This is a legally binding Employment Contract entered into by TechFlow Solutions Private Limited and Mr. Aditya Verma. Key provisions govern obligations, payment schedules, notice periods, and restrictive covenants. Overall Risk Profile is evaluated at 96/100 with emphasis on termination and liability limits.",
+      "plain_language_summary": "In simple terms, this Employment Contract defines what each party must deliver and what happens if something goes wrong. Be particularly mindful of the termination notice period and any indemnity commitments before signing.",
+      "hinglish_summary": "Aasan shabdon mein, yeh Employment Contract TechFlow Solutions Private Limited and Mr. Aditya Verma ke beech ki zimmedariyon ko tay karta hai. Sign karne se pehle termination notice period, security deposit, aur indemnity clauses ko dhyan se samajh lein.",
+      "risk_score": 96,
+      "risk_breakdown": {
+        "Critical": 2,
+        "High Attention": 3,
+        "Moderate": 0,
+        "Informational": 0
+      },
+      "clauses": [
+        {
+          "id": "clause-7a40f113",
+          "clause_type": "payment_terms",
+          "title": "Payment Terms & Monetary Obligations",
+          "original_text": "SECTION 2: COMPENSATION AND BENEFITS\n2.1 Remuneration: The Company shall pay the Employee a Cost-to-Company (CTC) of INR 32,00,000 (Rupees Thirty Two Lakhs Only) per annum, payable in twelve equal monthly installments, subject to statutory deductions including TDS and Provident Fund.\n2.2 Discretionary Bonus: An annual performance bonus of up to INR 4,00,000 may be awarded at the sole discretion of the Management Committee, contingent upon organizational revenue benchmarks.\n2.3 Payment Date: Salary shall be disbursed on or before the 5th day of each following calendar month via direct bank transfer.",
+          "plain_english": "Specifies payment/deposit terms of approximately INR 32,00,000 subject to the conditions detailed herein.",
+          "hinglish": "Payment kab, kitni aur kaise ki jayegi, aur late hone par kya penalty lagegi.",
+          "why_it_matters": "Sets payment schedules, late fees, interest penalties, and conditions precedent for disbursement.",
+          "user_obligation": "Disburse payments on or before the stated due dates to avoid penalty fees.",
+          "counterparty_obligation": "Issue valid invoices and provide documented deliverables as agreed.",
+          "potential_concern": "Look out for high compounded interest on delayed payments.",
+          "risk_level": "Critical",
+          "source": {
+            "page": 3,
+            "section": "SECTION 2: COMPENSATION AND BENEFITS",
+            "snippet": "SECTION 2: COMPENSATION AND BENEFITS\n2.1 Remuneration: The Company shall pay the Employee a Cost-to-Company (CTC) of INR 32,00,000 (Rupees Thirty Two Lakhs Only) per annum, payable in twelve equal monthly installments, s..."
+          },
+          "confidence": 0.94
+        },
+        {
+          "id": "clause-bb77106b",
+          "clause_type": "lock_in_period",
+          "title": "Lock-In Period & Minimum Term",
+          "original_text": "SECTION 3: MANDATORY LOCK-IN PERIOD\n3.1 Lock-In: In view of the specialized technical architecture training and intellectual capital imparted, the Employee agrees to a mandatory lock-in period of twelve (12) months from the Commencement Date.\n3.2 Liquidated Damages: If the Employee resigns or ceases employment prior to the expiration of the lock-in period, the Employee shall pay to the Company liquidated damages amounting to INR 3,50,000 to reimburse training and replacement overhead.",
+          "plain_english": "Prohibits either party from terminating before a specified period without incurring financial penalties.",
+          "hinglish": "Ek nishchit samay se pehle agreement khatam karne par penalty ya deposit forfeiture ka khatra.",
+          "why_it_matters": "Bars early exit without paying liquidated damages or forfeit of deposit for the entire lock-in duration.",
+          "user_obligation": "Remain bound to the agreement throughout the minimum term.",
+          "counterparty_obligation": "Provide services/tenancy without unjustified early repudiation.",
+          "potential_concern": "Early termination during lock-in usually requires paying the rent or fees for the entire remaining period.",
+          "risk_level": "High Attention",
+          "source": {
+            "page": 4,
+            "section": "SECTION 3: MANDATORY LOCK-IN PERIOD",
+            "snippet": "SECTION 3: MANDATORY LOCK-IN PERIOD\n3.1 Lock-In: In view of the specialized technical architecture training and intellectual capital imparted, the Employee agrees to a mandatory lock-in period of twelve (12) months from ..."
+          },
+          "confidence": 0.94
+        },
+        {
+          "id": "clause-c769e7e0",
+          "clause_type": "termination",
+          "title": "Termination and Notice Period",
+          "original_text": "SECTION 4: TERMINATION AND NOTICE PERIOD\n4.1 Termination Without Cause: Following successful completion of the probation period, either party may terminate this Agreement by providing ninety (90) days prior written notice, or payment of basic salary in lieu of such notice period.\n4.2 Termination For Cause: The Company may terminate this Agreement immediately without notice or severance pay in the event of gross misconduct, material breach of confidentiality, fraud, embezzlement, or persistent neglect of duties.\n4.3 Transition of Duties: During the notice period, the Employee shall diligently train successors and effectuate a clean handover of all repositories and architectural documentation.",
+          "plain_english": "Outlines the procedures, timelines, and grounds required to terminate this agreement.",
+          "hinglish": "Yeh batata hai ki contract kaise khatam kiya ja sakta hai aur kitne din pehle written notice dena hoga.",
+          "why_it_matters": "Dictates how and under what conditions either party can exit the contract, and potential penalties or notice periods required.",
+          "user_obligation": "Provide formal written notice within the required notice period before terminating.",
+          "counterparty_obligation": "Settle outstanding dues and transition active responsibilities upon notice receipt.",
+          "potential_concern": "Review if termination with or without cause triggers any immediate forfeit or repayment clause.",
+          "risk_level": "Moderate",
+          "source": {
+            "page": 5,
+            "section": "SECTION 4: TERMINATION AND NOTICE PERIOD",
+            "snippet": "SECTION 4: TERMINATION AND NOTICE PERIOD\n4.1 Termination Without Cause: Following successful completion of the probation period, either party may terminate this Agreement by providing ninety (90) days prior written notic..."
+          },
+          "confidence": 0.94
+        },
+        {
+          "id": "clause-e326be05",
+          "clause_type": "intellectual_property",
+          "title": "Intellectual Property Ownership & Assignment",
+          "original_text": "SECTION 5: INTELLECTUAL PROPERTY ASSIGNMENT\n5.1 Assignment of Work Product: The Employee agrees that all inventions, discoveries, software code, algorithms, patents, trade secrets, and designs conceived or developed during the tenure of employment shall be the sole and exclusive property of the Company as \"work made for hire\".\n5.2 Waiver of Moral Rights: To the maximum extent permitted by applicable law, the Employee hereby irrevocably waives all moral rights in any work product created for the Company.",
+          "plain_english": "Transfers ownership of all deliverables, inventions, and work product developed during the engagement.",
+          "hinglish": "Kaam ke dauran banaya gaya saara code, design ya idea counterparty ki sampatti (IP) ban jayega.",
+          "why_it_matters": "Determines whether code, inventions, documents, or creative assets you produce belong exclusively to the counterparty.",
+          "user_obligation": "Abide by the terms and standards explicitly delineated in this clause.",
+          "counterparty_obligation": "Reciprocate required notifications and contractual cooperation.",
+          "potential_concern": "Ensure clarity on conditions precedent before signing.",
+          "risk_level": "High Attention",
+          "source": {
+            "page": 6,
+            "section": "SECTION 5: INTELLECTUAL PROPERTY ASSIGNMENT",
+            "snippet": "SECTION 5: INTELLECTUAL PROPERTY ASSIGNMENT\n5.1 Assignment of Work Product: The Employee agrees that all inventions, discoveries, software code, algorithms, patents, trade secrets, and designs conceived or developed duri..."
+          },
+          "confidence": 0.94
+        },
+        {
+          "id": "clause-e804d486",
+          "clause_type": "non_compete",
+          "title": "Non-Compete & Restrictive Covenants",
+          "original_text": "SECTION 6: NON-COMPETE AND RESTRICTIVE COVENANTS\n6.1 Restraint: For a period of twelve (12) months following the cessation of employment for any reason, the Employee covenants that they shall not directly or indirectly engage in, advise, consult with, or accept employment from any entity offering competing B2B enterprise document processing services within India.\n6.2 Non-Solicitation: For twenty-four (24) months post-termination, the Employee shall not solicit, entice away, or attempt to hire any existing employees, consultants, or enterprise clients of the Company.",
+          "plain_english": "Attempts to prohibit you from engaging in or working with competing businesses for a designated duration or geography.",
+          "hinglish": "Yeh clause aapko contract ke baad kisi competitor ke sath kaam karne ya aisi business shuru karne se rokne ki koshish karta hai.",
+          "why_it_matters": "May restrict your freedom to work, consult, or start a similar business in the same industry after the contract ends. (Note: Under Section 27 of the Indian Contract Act 1872, post-employment non-competes are generally void).",
+          "user_obligation": "Refrain from joining or advising competing entities within designated domains/territories.",
+          "counterparty_obligation": "Honor post-termination employment restrictions if legally enforceable in jurisdiction.",
+          "potential_concern": "Section 27 of the Indian Contract Act voids covenants in restraint of trade; seek legal verification.",
+          "risk_level": "Critical",
+          "source": {
+            "page": 7,
+            "section": "SECTION 6: NON-COMPETE AND RESTRICTIVE COVENANTS",
+            "snippet": "SECTION 6: NON-COMPETE AND RESTRICTIVE COVENANTS\n6.1 Restraint: For a period of twelve (12) months following the cessation of employment for any reason, the Employee covenants that they shall not directly or indirectly e..."
+          },
+          "confidence": 0.94
+        },
+        {
+          "id": "clause-82fdb7a7",
+          "clause_type": "indemnification",
+          "title": "Indemnity & Defense Obligations",
+          "original_text": "SECTION 7: INDEMNIFICATION\n7.1 Employee Indemnity: The Employee shall indemnify, defend, and hold harmless the Company, its directors, officers, and affiliates against any third-party claims, liabilities, losses, damages, and legal costs arising from the Employee's gross negligence, willful misconduct, or unauthorized breach of third-party intellectual property.",
+          "plain_english": "Requires one party to compensate or defend the other for specific losses, liabilities, or legal claims.",
+          "hinglish": "Agar koi third party nuksan ya claim karti hai, toh uske kharche aur liability aapko uthani pad sakti hai.",
+          "why_it_matters": "Can shift massive third-party legal liabilities, defense fees, or damage claims onto you if someone sues or alleges losses.",
+          "user_obligation": "Potentially reimburse counterparty for third-party damages, claims, and legal costs.",
+          "counterparty_obligation": "Give prompt notice of any claim subject to indemnification.",
+          "potential_concern": "Broad uncapped indemnity could expose you to liabilities outside your immediate direct control.",
+          "risk_level": "Critical",
+          "source": {
+            "page": 8,
+            "section": "SECTION 7: INDEMNIFICATION",
+            "snippet": "SECTION 7: INDEMNIFICATION\n7.1 Employee Indemnity: The Employee shall indemnify, defend, and hold harmless the Company, its directors, officers, and affiliates against any third-party claims, liabilities, losses, damages..."
+          },
+          "confidence": 0.94
+        },
+        {
+          "id": "clause-eedc61da",
+          "clause_type": "confidentiality",
+          "title": "Confidentiality & Non-Disclosure",
+          "original_text": "SECTION 8: CONFIDENTIALITY AND RETURN OF ASSETS\n8.1 Confidential Information: The Employee shall maintain strict secrecy regarding customer data, source code, financial projections, and operational methodologies. This obligation shall survive the termination of employment indefinitely.\n8.2 Return of Materials: Within three (3) business days of cessation of employment, the Employee shall return all Company laptops, access badges, encrypted storage drives, and documentation.",
+          "plain_english": "Requires you to protect proprietary information and not disclose it to unauthorized parties.",
+          "hinglish": "Company ki gupt jankari ya business details ko kisi ke sath share karne par pabandi lagata hai.",
+          "why_it_matters": "Obligates you to maintain secrecy regarding trade secrets, source code, financial numbers, and client data.",
+          "user_obligation": "Abide by the terms and standards explicitly delineated in this clause.",
+          "counterparty_obligation": "Reciprocate required notifications and contractual cooperation.",
+          "potential_concern": "Ensure clarity on conditions precedent before signing.",
+          "risk_level": "Moderate",
+          "source": {
+            "page": 9,
+            "section": "SECTION 8: CONFIDENTIALITY AND RETURN OF ASSETS",
+            "snippet": "SECTION 8: CONFIDENTIALITY AND RETURN OF ASSETS\n8.1 Confidential Information: The Employee shall maintain strict secrecy regarding customer data, source code, financial projections, and operational methodologies. This ob..."
+          },
+          "confidence": 0.94
+        },
+        {
+          "id": "clause-d897a1b3",
+          "clause_type": "governing_law",
+          "title": "Governing Law & Exclusive Jurisdiction",
+          "original_text": "SECTION 9: GOVERNING LAW AND DISPUTE RESOLUTION\n9.1 Governing Law: This Agreement shall be governed by and construed in accordance with the laws of India.\n9.2 Arbitration: Any dispute arising out of this Agreement shall be referred to arbitration in Bangalore before a sole arbitrator appointed mutually by the parties, in accordance with the Arbitration and Conciliation Act, 1996. The seat and venue shall be Bangalore, Karnataka.",
+          "plain_english": "Specifies the legal jurisdiction and territorial courts that will resolve disputes arising from this agreement.",
+          "hinglish": "Yeh batata hai ki kisi bhi vivad ya dispute ki sunwayi kis shahar ya state ke court mein hogi.",
+          "why_it_matters": "Dictates which state/country's legal system governs the contract and where court proceedings must be filed.",
+          "user_obligation": "Abide by the terms and standards explicitly delineated in this clause.",
+          "counterparty_obligation": "Reciprocate required notifications and contractual cooperation.",
+          "potential_concern": "Ensure clarity on conditions precedent before signing.",
+          "risk_level": "Informational",
+          "source": {
+            "page": 10,
+            "section": "SECTION 9: GOVERNING LAW AND DISPUTE RESOLUTION",
+            "snippet": "SECTION 9: GOVERNING LAW AND DISPUTE RESOLUTION\n9.1 Governing Law: This Agreement shall be governed by and construed in accordance with the laws of India.\n9.2 Arbitration: Any dispute arising out of this Agreement shall ..."
+          },
+          "confidence": 0.94
+        }
+      ],
+      "risks": [
+        {
+          "id": "risk-a1fff83a",
+          "title": "Unilateral Discretion or Modification Rights",
+          "severity": "High Attention",
+          "detected_issue": "One party reserves the exclusive right to alter terms, policies, or make decisions with sole discretion.",
+          "why_it_matters": "Such provisions reduce contractual parity and leave the other party vulnerable to unexpected amendments.",
+          "potential_user_impact": "Terms, prices, or performance expectations may change without your explicit mutual consent.",
+          "source_clause_id": "clause-7a40f113",
+          "source_text": "SECTION 2: COMPENSATION AND BENEFITS\n2.1 Remuneration: The Company shall pay the Employee a Cost-to-Company (CTC) of INR 32,00,000 (Rupees Thirty Two Lakhs Only) per annum, payable in twelve equal monthly installments, s...",
+          "page_number": 3,
+          "suggested_lawyer_question": "Can we require mutual written consent for any future amendments to these core terms?"
+        },
+        {
+          "id": "risk-9306e1aa",
+          "title": "Mandatory Lock-In Period with Exit Forfeiture",
+          "severity": "High Attention",
+          "detected_issue": "A minimum mandatory commitment period is specified, restricting premature termination.",
+          "why_it_matters": "Exiting prior to the lock-in duration may lead to automatic forfeiture of security deposits or a contractual claim for all remaining unpaid months.",
+          "potential_user_impact": "You may be financially committed to pay the full term even if circumstances force you to vacate or leave early.",
+          "source_clause_id": "clause-bb77106b",
+          "source_text": "SECTION 3: MANDATORY LOCK-IN PERIOD\n3.1 Lock-In: In view of the specialized technical architecture training and intellectual capital imparted, the Employee agrees to a mandatory lock-in period of twelve (12) months from ...",
+          "page_number": 4,
+          "suggested_lawyer_question": "Are there exceptions or force majeure grounds to terminate during the lock-in period without forfeiting the deposit?"
+        },
+        {
+          "id": "risk-a23f2d7a",
+          "title": "Unilateral Discretion or Modification Rights",
+          "severity": "High Attention",
+          "detected_issue": "One party reserves the exclusive right to alter terms, policies, or make decisions with sole discretion.",
+          "why_it_matters": "Such provisions reduce contractual parity and leave the other party vulnerable to unexpected amendments.",
+          "potential_user_impact": "Terms, prices, or performance expectations may change without your explicit mutual consent.",
+          "source_clause_id": "clause-c769e7e0",
+          "source_text": "SECTION 4: TERMINATION AND NOTICE PERIOD\n4.1 Termination Without Cause: Following successful completion of the probation period, either party may terminate this Agreement by providing ninety (90) days prior written notic...",
+          "page_number": 5,
+          "suggested_lawyer_question": "Can we require mutual written consent for any future amendments to these core terms?"
+        },
+        {
+          "id": "risk-4a1f3d39",
+          "title": "Potentially Restrictive Non-Compete Provision",
+          "severity": "Critical",
+          "detected_issue": "The document contains language attempting to restrict post-termination employment or business activities.",
+          "why_it_matters": "Such covenants can severely hinder your ability to seek employment in your domain or start a business. In Indian jurisprudence (Section 27 of the Indian Contract Act, 1872), post-employment non-compete clauses are generally treated as void as restraints of trade.",
+          "potential_user_impact": "You could face intimidation, threat of legal notice, or confusion regarding your right to switch jobs or freelance.",
+          "source_clause_id": "clause-e804d486",
+          "source_text": "SECTION 6: NON-COMPETE AND RESTRICTIVE COVENANTS\n6.1 Restraint: For a period of twelve (12) months following the cessation of employment for any reason, the Employee covenants that they shall not directly or indirectly e...",
+          "page_number": 7,
+          "suggested_lawyer_question": "Is this post-employment non-compete enforceable under applicable state and national law, and should we negotiate its deletion?"
+        },
+        {
+          "id": "risk-b6b8f4b5",
+          "title": "Unusually Broad Indemnification Obligation",
+          "severity": "Critical",
+          "detected_issue": "The indemnity clause appears to require one party to cover a wide spectrum of third-party claims and defense costs.",
+          "why_it_matters": "If a third party files a lawsuit or claims damages against the counterparty, this provision might obligate you to pay their legal defense and settlement costs, even for events beyond your sole control.",
+          "potential_user_impact": "Potentially unbounded financial liability if legal disputes arise from work deliverables or software.",
+          "source_clause_id": "clause-82fdb7a7",
+          "source_text": "SECTION 7: INDEMNIFICATION\n7.1 Employee Indemnity: The Employee shall indemnify, defend, and hold harmless the Company, its directors, officers, and affiliates against any third-party claims, liabilities, losses, damages...",
+          "page_number": 8,
+          "suggested_lawyer_question": "Does this indemnity obligation expose me to liabilities beyond my direct willful misconduct or breach, and can we cap it?"
+        }
+      ],
+      "obligations": [
+        {
+          "id": "ob-c3141ff3",
+          "task": "Disburse agreed payments/fees on or before the due date",
+          "responsible_party": "Paying Party / User",
+          "deadline": "By the 5th of every calendar month",
+          "source_clause": "Payment & Consideration Clause",
+          "page_number": 3,
+          "consequence_of_breach": "Interest charge on overdue amounts, late fees, or contractual default proceedings",
+          "status": "Pending"
+        },
+        {
+          "id": "ob-fb8961d2",
+          "task": "Serve written notice at least 30 days prior to intending to terminate agreement",
+          "responsible_party": "Either Party",
+          "deadline": "30 days before exit",
+          "source_clause": "Termination & Notice Provision",
+          "page_number": 5,
+          "consequence_of_breach": "Premature exit without notice may result in forfeiture of deposit or salary in lieu of notice",
+          "status": "Pending"
+        },
+        {
+          "id": "ob-43c20b93",
+          "task": "Return all proprietary assets, confidential files, devices, or keys to counterparty",
+          "responsible_party": "User / Departing Party",
+          "deadline": "Promptly upon termination",
+          "source_clause": "Post-Termination Covenants & Asset Handover",
+          "page_number": 9,
+          "consequence_of_breach": "Withholding of final settlement, retention of deposit, or legal action for conversion",
+          "status": "Pending"
+        }
+      ],
+      "timeline": [
+        {
+          "id": "time-155912ec",
+          "date_text": "Execution Date",
+          "normalized_date": "Start of Term",
+          "event_type": "Agreement Commencement",
+          "description": "Commencement of rights, duties, and covenants under this agreement.",
+          "page_number": 1,
+          "source_clause": "Preamble"
+        },
+        {
+          "id": "time-c23cdec3",
+          "date_text": "5th of Every Month",
+          "normalized_date": "Recurring Monthly Due",
+          "event_type": "Payment Deadline",
+          "description": "Monthly consideration/rent or service fees payable to avoid default interest.",
+          "page_number": 3,
+          "source_clause": "Payment Terms & Monetary Obligations"
+        },
+        {
+          "id": "time-b0238a7c",
+          "date_text": "6 Months from Start",
+          "normalized_date": "Lock-In Expiration",
+          "event_type": "Lock-In Term Matures",
+          "description": "Lock-in duration ends. Normal termination notice can now be invoked without lock-in penalties.",
+          "page_number": 4,
+          "source_clause": "Lock-In Period & Minimum Term"
+        },
+        {
+          "id": "time-f15f5b33",
+          "date_text": "90 Days Post-Commencement",
+          "normalized_date": "End of Probation / Review",
+          "event_type": "Performance Review Milestone",
+          "description": "Completion of initial review period, confirming status or adjusting terms.",
+          "page_number": 5,
+          "source_clause": "Termination and Notice Period"
+        }
+      ],
+      "pages_content": [
+        {
+          "page_number": 1,
+          "text": "TECHFLOW SOLUTIONS PRIVATE LIMITED\nEMPLOYMENT AGREEMENT\n\nThis Employment Agreement (\"Agreement\") is executed on this 1st day of October, 2024, at Bangalore, Karnataka, India, by and between:\n\nTECHFLOW SOLUTIONS PRIVATE LIMITED, a company incorporated under the Companies Act, 2013, having its registered office at Prestige Tech Park, Marathahalli-Sarjapur Outer Ring Road, Bangalore - 560103 (hereinafter referred to as the \"Company\", which expression shall include its successors and assigns);\nAND\nMR. ADITYA VERMA, residing at Flat 402, Green Glen Layout, Bellandur, Bangalore - 560103 (hereinafter referred to as the \"Employee\").\n\nWHEREAS the Company desires to retain the services of the Employee as Lead Software Architect, and the Employee agrees to render services under the terms and conditions outlined herein.\n\nNOW, THEREFORE, IN CONSIDERATION OF THE MUTUAL COVENANTS CONTAINED HEREIN, THE PARTIES AGREE AS FOLLOWS:",
+          "sections": [
+            "TECHFLOW SOLUTIONS PRIVATE LIMITED",
+            "EMPLOYMENT AGREEMENT"
+          ]
+        },
+        {
+          "page_number": 2,
+          "text": "SECTION 1: APPOINTMENT AND PROBATION\n1.1 Position: The Employee shall serve as Lead Software Architect and shall report to the Chief Technology Officer (CTO).\n1.2 Probation Period: The Employee shall be on probation for a period of ninety (90) days from the Commencement Date. The Company reserves the right, in its sole discretion, to extend the probation period by an additional thirty (30) days based on performance review.",
+          "sections": []
+        },
+        {
+          "page_number": 3,
+          "text": "SECTION 2: COMPENSATION AND BENEFITS\n2.1 Remuneration: The Company shall pay the Employee a Cost-to-Company (CTC) of INR 32,00,000 (Rupees Thirty Two Lakhs Only) per annum, payable in twelve equal monthly installments, subject to statutory deductions including TDS and Provident Fund.\n2.2 Discretionary Bonus: An annual performance bonus of up to INR 4,00,000 may be awarded at the sole discretion of the Management Committee, contingent upon organizational revenue benchmarks.\n2.3 Payment Date: Salary shall be disbursed on or before the 5th day of each following calendar month via direct bank transfer.",
+          "sections": []
+        },
+        {
+          "page_number": 4,
+          "text": "SECTION 3: MANDATORY LOCK-IN PERIOD\n3.1 Lock-In: In view of the specialized technical architecture training and intellectual capital imparted, the Employee agrees to a mandatory lock-in period of twelve (12) months from the Commencement Date.\n3.2 Liquidated Damages: If the Employee resigns or ceases employment prior to the expiration of the lock-in period, the Employee shall pay to the Company liquidated damages amounting to INR 3,50,000 to reimburse training and replacement overhead.",
+          "sections": []
+        },
+        {
+          "page_number": 5,
+          "text": "SECTION 4: TERMINATION AND NOTICE PERIOD\n4.1 Termination Without Cause: Following successful completion of the probation period, either party may terminate this Agreement by providing ninety (90) days prior written notice, or payment of basic salary in lieu of such notice period.\n4.2 Termination For Cause: The Company may terminate this Agreement immediately without notice or severance pay in the event of gross misconduct, material breach of confidentiality, fraud, embezzlement, or persistent neglect of duties.\n4.3 Transition of Duties: During the notice period, the Employee shall diligently train successors and effectuate a clean handover of all repositories and architectural documentation.",
+          "sections": []
+        },
+        {
+          "page_number": 6,
+          "text": "SECTION 5: INTELLECTUAL PROPERTY ASSIGNMENT\n5.1 Assignment of Work Product: The Employee agrees that all inventions, discoveries, software code, algorithms, patents, trade secrets, and designs conceived or developed during the tenure of employment shall be the sole and exclusive property of the Company as \"work made for hire\".\n5.2 Waiver of Moral Rights: To the maximum extent permitted by applicable law, the Employee hereby irrevocably waives all moral rights in any work product created for the Company.",
+          "sections": []
+        },
+        {
+          "page_number": 7,
+          "text": "SECTION 6: NON-COMPETE AND RESTRICTIVE COVENANTS\n6.1 Restraint: For a period of twelve (12) months following the cessation of employment for any reason, the Employee covenants that they shall not directly or indirectly engage in, advise, consult with, or accept employment from any entity offering competing B2B enterprise document processing services within India.\n6.2 Non-Solicitation: For twenty-four (24) months post-termination, the Employee shall not solicit, entice away, or attempt to hire any existing employees, consultants, or enterprise clients of the Company.",
+          "sections": []
+        },
+        {
+          "page_number": 8,
+          "text": "SECTION 7: INDEMNIFICATION\n7.1 Employee Indemnity: The Employee shall indemnify, defend, and hold harmless the Company, its directors, officers, and affiliates against any third-party claims, liabilities, losses, damages, and legal costs arising from the Employee's gross negligence, willful misconduct, or unauthorized breach of third-party intellectual property.",
+          "sections": []
+        },
+        {
+          "page_number": 9,
+          "text": "SECTION 8: CONFIDENTIALITY AND RETURN OF ASSETS\n8.1 Confidential Information: The Employee shall maintain strict secrecy regarding customer data, source code, financial projections, and operational methodologies. This obligation shall survive the termination of employment indefinitely.\n8.2 Return of Materials: Within three (3) business days of cessation of employment, the Employee shall return all Company laptops, access badges, encrypted storage drives, and documentation.",
+          "sections": []
+        },
+        {
+          "page_number": 10,
+          "text": "SECTION 9: GOVERNING LAW AND DISPUTE RESOLUTION\n9.1 Governing Law: This Agreement shall be governed by and construed in accordance with the laws of India.\n9.2 Arbitration: Any dispute arising out of this Agreement shall be referred to arbitration in Bangalore before a sole arbitrator appointed mutually by the parties, in accordance with the Arbitration and Conciliation Act, 1996. The seat and venue shall be Bangalore, Karnataka.",
+          "sections": []
+        }
+      ]
+    },
+    "doc-demo-rental": {
+      "id": "doc-demo-rental",
+      "filename": "Palm_Springs_Residential_Lease_Agreement.pdf",
+      "file_type": "pdf",
+      "file_size": 3114,
+      "page_count": 6,
+      "uploaded_at": "2026-09-21 00:53",
+      "doc_type": "Rental Agreement",
+      "parties": [
+        "Mr. Rajesh Malhotra (Lessor)",
+        "Ms. Priya Sharma (Lessee)"
+      ],
+      "effective_date": "1st December 2024",
+      "governing_law": "Laws of India (Gurgaon, Haryana)",
+      "jurisdiction": "India",
+      "dispute_mechanism": "Arbitration / Designated Courts",
+      "executive_summary": "This is a legally binding Rental Agreement entered into by Mr. Rajesh Malhotra (Lessor) and Ms. Priya Sharma (Lessee). Key provisions govern obligations, payment schedules, notice periods, and restrictive covenants. Overall Risk Profile is evaluated at 39/100 with emphasis on termination and liability limits.",
+      "plain_language_summary": "In simple terms, this Rental Agreement defines what each party must deliver and what happens if something goes wrong. Be particularly mindful of the termination notice period and any indemnity commitments before signing.",
+      "hinglish_summary": "Aasan shabdon mein, yeh Rental Agreement Mr. Rajesh Malhotra (Lessor) and Ms. Priya Sharma (Lessee) ke beech ki zimmedariyon ko tay karta hai. Sign karne se pehle termination notice period, security deposit, aur indemnity clauses ko dhyan se samajh lein.",
+      "risk_score": 39,
+      "risk_breakdown": {
+        "Critical": 0,
+        "High Attention": 2,
+        "Moderate": 0,
+        "Informational": 1
+      },
+      "clauses": [
+        {
+          "id": "clause-a22a4f82",
+          "clause_type": "termination",
+          "title": "Termination and Notice Period",
+          "original_text": "SECTION 1: TENURE AND LOCK-IN PERIOD\n1.1 Tenure: The lease shall be for an initial period of eleven (11) months commencing on 1st December, 2024, and ending on 31st October, 2025.\n1.2 Lock-In Period: There shall be a mandatory lock-in period of six (6) months for both parties. Neither party may terminate the tenancy during the lock-in period. If the Lessee vacates during the lock-in period, the entire security deposit shall stand forfeited.",
+          "plain_english": "Outlines the procedures, timelines, and grounds required to terminate this agreement.",
+          "hinglish": "Yeh batata hai ki contract kaise khatam kiya ja sakta hai aur kitne din pehle written notice dena hoga.",
+          "why_it_matters": "Dictates how and under what conditions either party can exit the contract, and potential penalties or notice periods required.",
+          "user_obligation": "Provide formal written notice within the required notice period before terminating.",
+          "counterparty_obligation": "Settle outstanding dues and transition active responsibilities upon notice receipt.",
+          "potential_concern": "Review if termination with or without cause triggers any immediate forfeit or repayment clause.",
+          "risk_level": "High Attention",
+          "source": {
+            "page": 2,
+            "section": "SECTION 1: TENURE AND LOCK-IN PERIOD",
+            "snippet": "SECTION 1: TENURE AND LOCK-IN PERIOD\n1.1 Tenure: The lease shall be for an initial period of eleven (11) months commencing on 1st December, 2024, and ending on 31st October, 2025.\n1.2 Lock-In Period: There shall be a man..."
+          },
+          "confidence": 0.94
+        },
+        {
+          "id": "clause-e8b8abc7",
+          "clause_type": "payment_terms",
+          "title": "Payment Terms & Monetary Obligations",
+          "original_text": "SECTION 2: MONTHLY RENT AND MAINTENANCE\n2.1 Monthly Rent: The Lessee shall pay a monthly rent of INR 55,000 (Rupees Fifty Five Thousand Only) per month.\n2.2 Due Date: The rent shall be credited on or before the 7th day of each English calendar month into the Lessor's designated bank account. Overdue rent shall attract interest at eighteen percent (18%) per annum.\n2.3 Society Maintenance: Society maintenance charges of INR 6,500 per month shall be paid directly by the Lessee to the Residents Welfare Association (RWA).",
+          "plain_english": "Specifies payment/deposit terms of approximately INR 55,000 subject to the conditions detailed herein.",
+          "hinglish": "Payment kab, kitni aur kaise ki jayegi, aur late hone par kya penalty lagegi.",
+          "why_it_matters": "Sets payment schedules, late fees, interest penalties, and conditions precedent for disbursement.",
+          "user_obligation": "Disburse payments on or before the stated due dates to avoid penalty fees.",
+          "counterparty_obligation": "Issue valid invoices and provide documented deliverables as agreed.",
+          "potential_concern": "Look out for high compounded interest on delayed payments.",
+          "risk_level": "Moderate",
+          "source": {
+            "page": 3,
+            "section": "SECTION 2: MONTHLY RENT AND MAINTENANCE",
+            "snippet": "SECTION 2: MONTHLY RENT AND MAINTENANCE\n2.1 Monthly Rent: The Lessee shall pay a monthly rent of INR 55,000 (Rupees Fifty Five Thousand Only) per month.\n2.2 Due Date: The rent shall be credited on or before the 7th day o..."
+          },
+          "confidence": 0.94
+        },
+        {
+          "id": "clause-b0127836",
+          "clause_type": "security_deposit",
+          "title": "Security Deposit & Deductions",
+          "original_text": "SECTION 3: SECURITY DEPOSIT\n3.1 Amount: The Lessee has paid an interest-free refundable security deposit of INR 1,65,000 (representing three months' rent) upon signing.\n3.2 Refund & Deductions: The deposit shall be refunded within seven (7) banking days of peaceful handover of the premises, subject to deductions for unpaid utility bills, pending maintenance, or reasonable painting and deep cleaning costs.",
+          "plain_english": "Specifies payment/deposit terms of approximately INR 1,65,000 subject to the conditions detailed herein.",
+          "hinglish": "Security deposit ka paisa kab wapas milega aur kin cheezon ke liye deduction kiya ja sakta hai.",
+          "why_it_matters": "Sets amount of deposit held, conditions for deduction, and timeline for refund upon vacating or handover.",
+          "user_obligation": "Pay the agreed deposit upfront and maintain premises/assets without unapproved damage.",
+          "counterparty_obligation": "Safely refund the deposit within the specified number of business days following vacancy.",
+          "potential_concern": "Watch out for unilateral landlord/counterparty discretion in determining repair deductions.",
+          "risk_level": "High Attention",
+          "source": {
+            "page": 4,
+            "section": "SECTION 3: SECURITY DEPOSIT",
+            "snippet": "SECTION 3: SECURITY DEPOSIT\n3.1 Amount: The Lessee has paid an interest-free refundable security deposit of INR 1,65,000 (representing three months' rent) upon signing.\n3.2 Refund & Deductions: The deposit shall be refun..."
+          },
+          "confidence": 0.94
+        },
+        {
+          "id": "clause-b77616c0",
+          "clause_type": "termination",
+          "title": "Termination and Notice Period",
+          "original_text": "SECTION 4: TERMINATION AND VACATION NOTICE\n4.1 Notice Period: Post completion of the six-month lock-in period, either party may terminate this agreement by serving two (2) months prior written notice or rent in lieu thereof.\n4.2 Inspection: The Lessor or their authorized agent shall have the right to enter and inspect the premises at reasonable daytime hours with twenty-four (24) hours advance notice.",
+          "plain_english": "Outlines the procedures, timelines, and grounds required to terminate this agreement.",
+          "hinglish": "Yeh batata hai ki contract kaise khatam kiya ja sakta hai aur kitne din pehle written notice dena hoga.",
+          "why_it_matters": "Dictates how and under what conditions either party can exit the contract, and potential penalties or notice periods required.",
+          "user_obligation": "Provide formal written notice within the required notice period before terminating.",
+          "counterparty_obligation": "Settle outstanding dues and transition active responsibilities upon notice receipt.",
+          "potential_concern": "Review if termination with or without cause triggers any immediate forfeit or repayment clause.",
+          "risk_level": "High Attention",
+          "source": {
+            "page": 5,
+            "section": "SECTION 4: TERMINATION AND VACATION NOTICE",
+            "snippet": "SECTION 4: TERMINATION AND VACATION NOTICE\n4.1 Notice Period: Post completion of the six-month lock-in period, either party may terminate this agreement by serving two (2) months prior written notice or rent in lieu ther..."
+          },
+          "confidence": 0.94
+        },
+        {
+          "id": "clause-21fa8a52",
+          "clause_type": "governing_law",
+          "title": "Governing Law & Exclusive Jurisdiction",
+          "original_text": "SECTION 6: GOVERNING LAW AND JURISDICTION\n6.1 Jurisdiction: This Agreement shall be governed by the laws of India and the courts at Gurgaon, Haryana shall have exclusive jurisdiction over all disputes.",
+          "plain_english": "Specifies the legal jurisdiction and territorial courts that will resolve disputes arising from this agreement.",
+          "hinglish": "Yeh batata hai ki kisi bhi vivad ya dispute ki sunwayi kis shahar ya state ke court mein hogi.",
+          "why_it_matters": "Dictates which state/country's legal system governs the contract and where court proceedings must be filed.",
+          "user_obligation": "Abide by the terms and standards explicitly delineated in this clause.",
+          "counterparty_obligation": "Reciprocate required notifications and contractual cooperation.",
+          "potential_concern": "Ensure clarity on conditions precedent before signing.",
+          "risk_level": "Informational",
+          "source": {
+            "page": 6,
+            "section": "SECTION 6: GOVERNING LAW AND JURISDICTION",
+            "snippet": "SECTION 6: GOVERNING LAW AND JURISDICTION\n6.1 Jurisdiction: This Agreement shall be governed by the laws of India and the courts at Gurgaon, Haryana shall have exclusive jurisdiction over all disputes."
+          },
+          "confidence": 0.94
+        }
+      ],
+      "risks": [
+        {
+          "id": "risk-d05bc185",
+          "title": "Mandatory Lock-In Period with Exit Forfeiture",
+          "severity": "High Attention",
+          "detected_issue": "A minimum mandatory commitment period is specified, restricting premature termination.",
+          "why_it_matters": "Exiting prior to the lock-in duration may lead to automatic forfeiture of security deposits or a contractual claim for all remaining unpaid months.",
+          "potential_user_impact": "You may be financially committed to pay the full term even if circumstances force you to vacate or leave early.",
+          "source_clause_id": "clause-a22a4f82",
+          "source_text": "SECTION 1: TENURE AND LOCK-IN PERIOD\n1.1 Tenure: The lease shall be for an initial period of eleven (11) months commencing on 1st December, 2024, and ending on 31st October, 2025.\n1.2 Lock-In Period: There shall be a man...",
+          "page_number": 2,
+          "suggested_lawyer_question": "Are there exceptions or force majeure grounds to terminate during the lock-in period without forfeiting the deposit?"
+        },
+        {
+          "id": "risk-0f76c156",
+          "title": "Mandatory Lock-In Period with Exit Forfeiture",
+          "severity": "High Attention",
+          "detected_issue": "A minimum mandatory commitment period is specified, restricting premature termination.",
+          "why_it_matters": "Exiting prior to the lock-in duration may lead to automatic forfeiture of security deposits or a contractual claim for all remaining unpaid months.",
+          "potential_user_impact": "You may be financially committed to pay the full term even if circumstances force you to vacate or leave early.",
+          "source_clause_id": "clause-b77616c0",
+          "source_text": "SECTION 4: TERMINATION AND VACATION NOTICE\n4.1 Notice Period: Post completion of the six-month lock-in period, either party may terminate this agreement by serving two (2) months prior written notice or rent in lieu ther...",
+          "page_number": 5,
+          "suggested_lawyer_question": "Are there exceptions or force majeure grounds to terminate during the lock-in period without forfeiting the deposit?"
+        },
+        {
+          "id": "risk-686ecc11",
+          "title": "Designated Exclusive Judicial Forum",
+          "severity": "Informational",
+          "detected_issue": "Exclusive dispute resolution is designated to courts of a specific city or jurisdiction.",
+          "why_it_matters": "Litigating or filing claims will require hiring counsel and appearing in that specific geographical forum.",
+          "potential_user_impact": "Increased logistical and travel expenses if litigation or court intervention becomes necessary.",
+          "source_clause_id": "clause-21fa8a52",
+          "source_text": "SECTION 6: GOVERNING LAW AND JURISDICTION\n6.1 Jurisdiction: This Agreement shall be governed by the laws of India and the courts at Gurgaon, Haryana shall have exclusive jurisdiction over all disputes.",
+          "page_number": 6,
+          "suggested_lawyer_question": "Does this jurisdiction choice pose significant practical inconvenience or cost hurdles for me?"
+        }
+      ],
+      "obligations": [
+        {
+          "id": "ob-e98c5898",
+          "task": "Serve written notice at least 30 months prior to intending to terminate agreement",
+          "responsible_party": "Either Party",
+          "deadline": "30 months before exit",
+          "source_clause": "Termination & Notice Provision",
+          "page_number": 2,
+          "consequence_of_breach": "Premature exit without notice may result in forfeiture of deposit or salary in lieu of notice",
+          "status": "Pending"
+        },
+        {
+          "id": "ob-e54086c5",
+          "task": "Disburse agreed payments/fees on or before the due date",
+          "responsible_party": "Paying Party / User",
+          "deadline": "By the 7th of every calendar month",
+          "source_clause": "Payment & Consideration Clause",
+          "page_number": 3,
+          "consequence_of_breach": "Interest charge on overdue amounts, late fees, or contractual default proceedings",
+          "status": "Pending"
+        },
+        {
+          "id": "ob-1df3ae29",
+          "task": "Disburse agreed payments/fees on or before the due date",
+          "responsible_party": "Paying Party / User",
+          "deadline": "Per agreed invoice schedule",
+          "source_clause": "Payment & Consideration Clause",
+          "page_number": 4,
+          "consequence_of_breach": "Interest charge on overdue amounts, late fees, or contractual default proceedings",
+          "status": "Pending"
+        },
+        {
+          "id": "ob-9e093022",
+          "task": "Serve written notice at least 30 months prior to intending to terminate agreement",
+          "responsible_party": "Either Party",
+          "deadline": "30 months before exit",
+          "source_clause": "Termination & Notice Provision",
+          "page_number": 5,
+          "consequence_of_breach": "Premature exit without notice may result in forfeiture of deposit or salary in lieu of notice",
+          "status": "Pending"
+        }
+      ],
+      "timeline": [
+        {
+          "id": "time-8fd4f0d8",
+          "date_text": "1st December, 2024",
+          "normalized_date": "Effective Date",
+          "event_type": "Agreement Commencement",
+          "description": "Official effective date from which rights, duties, and covenants become legally binding.",
+          "page_number": 1,
+          "source_clause": "Preamble / Execution Clause"
+        },
+        {
+          "id": "time-db8d9578",
+          "date_text": "6 Months from Start",
+          "normalized_date": "Lock-In Expiration",
+          "event_type": "Lock-In Term Matures",
+          "description": "Lock-in duration ends. Normal termination notice can now be invoked without lock-in penalties.",
+          "page_number": 2,
+          "source_clause": "Termination and Notice Period"
+        },
+        {
+          "id": "time-393ae0b4",
+          "date_text": "5th of Every Month",
+          "normalized_date": "Recurring Monthly Due",
+          "event_type": "Payment Deadline",
+          "description": "Monthly consideration/rent or service fees payable to avoid default interest.",
+          "page_number": 3,
+          "source_clause": "Payment Terms & Monetary Obligations"
+        },
+        {
+          "id": "time-f1ef3fb1",
+          "date_text": "6 Months from Start",
+          "normalized_date": "Lock-In Expiration",
+          "event_type": "Lock-In Term Matures",
+          "description": "Lock-in duration ends. Normal termination notice can now be invoked without lock-in penalties.",
+          "page_number": 5,
+          "source_clause": "Termination and Notice Period"
+        }
+      ],
+      "pages_content": [
+        {
+          "page_number": 1,
+          "text": "RESIDENTIAL LEASE AND LICENSE AGREEMENT\n\nThis Residential Lease Agreement (\"Agreement\") is made and executed on this 15th day of November, 2024, at Gurgaon, Haryana, India:\n\nBY AND BETWEEN:\nMR. RAJESH MALHOTRA, residing at Villa 18, DLF Phase 1, Gurgaon - 122002 (hereinafter called the \"LESSOR\" / \"Landlord\");\nAND\nMS. PRIYA SHARMA, working at Cyber City, DLF Phase 2, Gurgaon (hereinafter called the \"LESSEE\" / \"Tenant\").\n\nWHEREAS the Lessor is the absolute legal owner of Apartment No. 804, Tower B, Palm Springs Residences, Golf Course Road, Gurgaon - 122002 (hereinafter referred to as the \"Demised Premises\"); and the Lessee has agreed to take the premises on rent on the following terms:\n\nNOW THIS DEED WITNESSETH AS FOLLOWS:",
+          "sections": [
+            "RESIDENTIAL LEASE AND LICENSE AGREEMENT"
+          ]
+        },
+        {
+          "page_number": 2,
+          "text": "SECTION 1: TENURE AND LOCK-IN PERIOD\n1.1 Tenure: The lease shall be for an initial period of eleven (11) months commencing on 1st December, 2024, and ending on 31st October, 2025.\n1.2 Lock-In Period: There shall be a mandatory lock-in period of six (6) months for both parties. Neither party may terminate the tenancy during the lock-in period. If the Lessee vacates during the lock-in period, the entire security deposit shall stand forfeited.",
+          "sections": []
+        },
+        {
+          "page_number": 3,
+          "text": "SECTION 2: MONTHLY RENT AND MAINTENANCE\n2.1 Monthly Rent: The Lessee shall pay a monthly rent of INR 55,000 (Rupees Fifty Five Thousand Only) per month.\n2.2 Due Date: The rent shall be credited on or before the 7th day of each English calendar month into the Lessor's designated bank account. Overdue rent shall attract interest at eighteen percent (18%) per annum.\n2.3 Society Maintenance: Society maintenance charges of INR 6,500 per month shall be paid directly by the Lessee to the Residents Welfare Association (RWA).",
+          "sections": []
+        },
+        {
+          "page_number": 4,
+          "text": "SECTION 3: SECURITY DEPOSIT\n3.1 Amount: The Lessee has paid an interest-free refundable security deposit of INR 1,65,000 (representing three months' rent) upon signing.\n3.2 Refund & Deductions: The deposit shall be refunded within seven (7) banking days of peaceful handover of the premises, subject to deductions for unpaid utility bills, pending maintenance, or reasonable painting and deep cleaning costs.",
+          "sections": []
+        },
+        {
+          "page_number": 5,
+          "text": "SECTION 4: TERMINATION AND VACATION NOTICE\n4.1 Notice Period: Post completion of the six-month lock-in period, either party may terminate this agreement by serving two (2) months prior written notice or rent in lieu thereof.\n4.2 Inspection: The Lessor or their authorized agent shall have the right to enter and inspect the premises at reasonable daytime hours with twenty-four (24) hours advance notice.",
+          "sections": []
+        },
+        {
+          "page_number": 6,
+          "text": "SECTION 5: USE AND MAINTENANCE OBLIGATIONS\n5.1 Residential Purpose: The premises shall be used exclusively for residential purposes and shall not be sub-let or shared with commercial entities.\n5.2 Minor Repairs: Day-to-day minor maintenance (e.g. bulb replacements, tap leakages up to INR 1,000) shall be borne by the Lessee. Major structural repairs shall remain the responsibility of the Lessor.\n\nSECTION 6: GOVERNING LAW AND JURISDICTION\n6.1 Jurisdiction: This Agreement shall be governed by the laws of India and the courts at Gurgaon, Haryana shall have exclusive jurisdiction over all disputes.",
+          "sections": []
+        }
+      ]
+    },
+    "doc-demo-nda": {
+      "id": "doc-demo-nda",
+      "filename": "Nexis_BharatFintech_Mutual_NDA.pdf",
+      "file_type": "pdf",
+      "file_size": 2989,
+      "page_count": 1,
+      "uploaded_at": "2026-09-21 00:53",
+      "doc_type": "Non-Disclosure Agreement (NDA)",
+      "parties": [
+        "Nexis AI Inc.",
+        "Bharat FinTech Technologies Pvt Ltd"
+      ],
+      "effective_date": "10th January 2025",
+      "governing_law": "England and Wales / India (ICC Arbitration)",
+      "jurisdiction": "India / Global",
+      "dispute_mechanism": "Arbitration / Designated Courts",
+      "executive_summary": "This is a legally binding Non-Disclosure Agreement (NDA) entered into by Nexis AI Inc. and Bharat FinTech Technologies Pvt Ltd. Key provisions govern obligations, payment schedules, notice periods, and restrictive covenants. Overall Risk Profile is evaluated at 12/100 with emphasis on termination and liability limits.",
+      "plain_language_summary": "In simple terms, this Non-Disclosure Agreement (NDA) defines what each party must deliver and what happens if something goes wrong. Be particularly mindful of the termination notice period and any indemnity commitments before signing.",
+      "hinglish_summary": "Aasan shabdon mein, yeh Non-Disclosure Agreement (NDA) Nexis AI Inc. and Bharat FinTech Technologies Pvt Ltd ke beech ki zimmedariyon ko tay karta hai. Sign karne se pehle termination notice period, security deposit, aur indemnity clauses ko dhyan se samajh lein.",
+      "risk_score": 12,
+      "risk_breakdown": {
+        "Critical": 0,
+        "High Attention": 0,
+        "Moderate": 0,
+        "Informational": 0
+      },
+      "clauses": [
+        {
+          "id": "clause-8e6d716f",
+          "clause_type": "confidentiality",
+          "title": "Confidentiality & Non-Disclosure",
+          "original_text": "MUTUAL NON-DISCLOSURE AND PROPRIETARY INFORMATION AGREEMENT",
+          "plain_english": "Requires you to protect proprietary information and not disclose it to unauthorized parties.",
+          "hinglish": "Company ki gupt jankari ya business details ko kisi ke sath share karne par pabandi lagata hai.",
+          "why_it_matters": "Obligates you to maintain secrecy regarding trade secrets, source code, financial numbers, and client data.",
+          "user_obligation": "Abide by the terms and standards explicitly delineated in this clause.",
+          "counterparty_obligation": "Reciprocate required notifications and contractual cooperation.",
+          "potential_concern": "Ensure clarity on conditions precedent before signing.",
+          "risk_level": "Moderate",
+          "source": {
+            "page": 1,
+            "section": null,
+            "snippet": "MUTUAL NON-DISCLOSURE AND PROPRIETARY INFORMATION AGREEMENT"
+          },
+          "confidence": 0.94
+        },
+        {
+          "id": "clause-9277ab48",
+          "clause_type": "confidentiality",
+          "title": "Confidentiality & Non-Disclosure",
+          "original_text": "This Mutual Non-Disclosure Agreement (\"Agreement\") is entered into as of 10th January, 2025 (\"Effective Date\"), by and between:",
+          "plain_english": "Requires you to protect proprietary information and not disclose it to unauthorized parties.",
+          "hinglish": "Company ki gupt jankari ya business details ko kisi ke sath share karne par pabandi lagata hai.",
+          "why_it_matters": "Obligates you to maintain secrecy regarding trade secrets, source code, financial numbers, and client data.",
+          "user_obligation": "Abide by the terms and standards explicitly delineated in this clause.",
+          "counterparty_obligation": "Reciprocate required notifications and contractual cooperation.",
+          "potential_concern": "Ensure clarity on conditions precedent before signing.",
+          "risk_level": "Moderate",
+          "source": {
+            "page": 1,
+            "section": null,
+            "snippet": "This Mutual Non-Disclosure Agreement (\"Agreement\") is entered into as of 10th January, 2025 (\"Effective Date\"), by and between:"
+          },
+          "confidence": 0.94
+        },
+        {
+          "id": "clause-2680f804",
+          "clause_type": "governing_law",
+          "title": "Governing Law & Exclusive Jurisdiction",
+          "original_text": "NEXIS AI INC., a Delaware corporation, having principal offices at 500 Howard Street, San Francisco, CA 94105 (\"Party A\");\nAND\nBHARAT FINTECH TECHNOLOGIES PRIVATE LIMITED, a company organized under the laws of India, having offices at Bandra Kurla Complex, Mumbai 400051 (\"Party B\").",
+          "plain_english": "Specifies the legal jurisdiction and territorial courts that will resolve disputes arising from this agreement.",
+          "hinglish": "Yeh batata hai ki kisi bhi vivad ya dispute ki sunwayi kis shahar ya state ke court mein hogi.",
+          "why_it_matters": "Dictates which state/country's legal system governs the contract and where court proceedings must be filed.",
+          "user_obligation": "Abide by the terms and standards explicitly delineated in this clause.",
+          "counterparty_obligation": "Reciprocate required notifications and contractual cooperation.",
+          "potential_concern": "Ensure clarity on conditions precedent before signing.",
+          "risk_level": "Informational",
+          "source": {
+            "page": 1,
+            "section": null,
+            "snippet": "NEXIS AI INC., a Delaware corporation, having principal offices at 500 Howard Street, San Francisco, CA 94105 (\"Party A\");\nAND\nBHARAT FINTECH TECHNOLOGIES PRIVATE LIMITED, a company organized under the laws of India, hav..."
+          },
+          "confidence": 0.94
+        },
+        {
+          "id": "clause-0f485777",
+          "clause_type": "confidentiality",
+          "title": "Confidentiality & Non-Disclosure",
+          "original_text": "2. CONFIDENTIAL INFORMATION\n\"Confidential Information\" means all non-public information disclosed in tangible, electronic, or oral form, including source code, API designs, algorithmic prompts, financial statements, and customer lists.",
+          "plain_english": "Requires you to protect proprietary information and not disclose it to unauthorized parties.",
+          "hinglish": "Company ki gupt jankari ya business details ko kisi ke sath share karne par pabandi lagata hai.",
+          "why_it_matters": "Obligates you to maintain secrecy regarding trade secrets, source code, financial numbers, and client data.",
+          "user_obligation": "Abide by the terms and standards explicitly delineated in this clause.",
+          "counterparty_obligation": "Reciprocate required notifications and contractual cooperation.",
+          "potential_concern": "Ensure clarity on conditions precedent before signing.",
+          "risk_level": "Moderate",
+          "source": {
+            "page": 1,
+            "section": null,
+            "snippet": "2. CONFIDENTIAL INFORMATION\n\"Confidential Information\" means all non-public information disclosed in tangible, electronic, or oral form, including source code, API designs, algorithmic prompts, financial statements, and ..."
+          },
+          "confidence": 0.94
+        },
+        {
+          "id": "clause-9e8d3758",
+          "clause_type": "confidentiality",
+          "title": "Confidentiality & Non-Disclosure",
+          "original_text": "3. EXCLUSIONS\nConfidential Information does not include information that: (a) is or becomes publicly known through no breach of Receiving Party; (b) was already known prior to disclosure; (c) is independently developed without reference to the Disclosing Party's information; or (d) is required to be disclosed by applicable court order or statutory requirement.",
+          "plain_english": "Requires you to protect proprietary information and not disclose it to unauthorized parties.",
+          "hinglish": "Company ki gupt jankari ya business details ko kisi ke sath share karne par pabandi lagata hai.",
+          "why_it_matters": "Obligates you to maintain secrecy regarding trade secrets, source code, financial numbers, and client data.",
+          "user_obligation": "Abide by the terms and standards explicitly delineated in this clause.",
+          "counterparty_obligation": "Reciprocate required notifications and contractual cooperation.",
+          "potential_concern": "Ensure clarity on conditions precedent before signing.",
+          "risk_level": "Moderate",
+          "source": {
+            "page": 1,
+            "section": null,
+            "snippet": "3. EXCLUSIONS\nConfidential Information does not include information that: (a) is or becomes publicly known through no breach of Receiving Party; (b) was already known prior to disclosure; (c) is independently developed w..."
+          },
+          "confidence": 0.94
+        },
+        {
+          "id": "clause-17dbad38",
+          "clause_type": "confidentiality",
+          "title": "Confidentiality & Non-Disclosure",
+          "original_text": "4. OBLIGATIONS OF RECEIVING PARTY\nThe Receiving Party agrees to: (i) exercise at least reasonable care in protecting the Confidential Information; (ii) not disclose Confidential Information to third parties without prior written consent; and (iii) use Confidential Information exclusively for the stated Purpose.",
+          "plain_english": "Requires you to protect proprietary information and not disclose it to unauthorized parties.",
+          "hinglish": "Company ki gupt jankari ya business details ko kisi ke sath share karne par pabandi lagata hai.",
+          "why_it_matters": "Obligates you to maintain secrecy regarding trade secrets, source code, financial numbers, and client data.",
+          "user_obligation": "Abide by the terms and standards explicitly delineated in this clause.",
+          "counterparty_obligation": "Reciprocate required notifications and contractual cooperation.",
+          "potential_concern": "Ensure clarity on conditions precedent before signing.",
+          "risk_level": "Moderate",
+          "source": {
+            "page": 1,
+            "section": null,
+            "snippet": "4. OBLIGATIONS OF RECEIVING PARTY\nThe Receiving Party agrees to: (i) exercise at least reasonable care in protecting the Confidential Information; (ii) not disclose Confidential Information to third parties without prior..."
+          },
+          "confidence": 0.94
+        },
+        {
+          "id": "clause-4140db0b",
+          "clause_type": "confidentiality",
+          "title": "Confidentiality & Non-Disclosure",
+          "original_text": "5. TERM AND SURVIVAL\nThis Agreement shall govern disclosures made for a period of one (1) year from the Effective Date. The confidentiality and non-use obligations with respect to all disclosed Confidential Information shall survive for three (3) years from the date of disclosure; provided that trade secrets shall remain confidential in perpetuity.",
+          "plain_english": "Requires you to protect proprietary information and not disclose it to unauthorized parties.",
+          "hinglish": "Company ki gupt jankari ya business details ko kisi ke sath share karne par pabandi lagata hai.",
+          "why_it_matters": "Obligates you to maintain secrecy regarding trade secrets, source code, financial numbers, and client data.",
+          "user_obligation": "Abide by the terms and standards explicitly delineated in this clause.",
+          "counterparty_obligation": "Reciprocate required notifications and contractual cooperation.",
+          "potential_concern": "Ensure clarity on conditions precedent before signing.",
+          "risk_level": "Moderate",
+          "source": {
+            "page": 1,
+            "section": null,
+            "snippet": "5. TERM AND SURVIVAL\nThis Agreement shall govern disclosures made for a period of one (1) year from the Effective Date. The confidentiality and non-use obligations with respect to all disclosed Confidential Information s..."
+          },
+          "confidence": 0.94
+        },
+        {
+          "id": "clause-bbfe9668",
+          "clause_type": "confidentiality",
+          "title": "Confidentiality & Non-Disclosure",
+          "original_text": "6. RETURN OR DESTRUCTION OF MATERIALS\nWithin ten (10) business days following written request from the Disclosing Party or termination of discussions, the Receiving Party shall return or destroy all documents, notes, and electronic copies containing Confidential Information, providing written certification of compliance.",
+          "plain_english": "Requires you to protect proprietary information and not disclose it to unauthorized parties.",
+          "hinglish": "Company ki gupt jankari ya business details ko kisi ke sath share karne par pabandi lagata hai.",
+          "why_it_matters": "Obligates you to maintain secrecy regarding trade secrets, source code, financial numbers, and client data.",
+          "user_obligation": "Abide by the terms and standards explicitly delineated in this clause.",
+          "counterparty_obligation": "Reciprocate required notifications and contractual cooperation.",
+          "potential_concern": "Ensure clarity on conditions precedent before signing.",
+          "risk_level": "Moderate",
+          "source": {
+            "page": 1,
+            "section": null,
+            "snippet": "6. RETURN OR DESTRUCTION OF MATERIALS\nWithin ten (10) business days following written request from the Disclosing Party or termination of discussions, the Receiving Party shall return or destroy all documents, notes, and..."
+          },
+          "confidence": 0.94
+        },
+        {
+          "id": "clause-a7d64f22",
+          "clause_type": "governing_law",
+          "title": "Governing Law & Exclusive Jurisdiction",
+          "original_text": "8. GOVERNING LAW AND ARBITRATION\nThis Agreement shall be governed by the laws of England and Wales / India. Any dispute arising out of this Agreement shall be resolved through binding arbitration under the rules of the International Chamber of Commerce (ICC) or Singapore International Arbitration Centre (SIAC).",
+          "plain_english": "Specifies the legal jurisdiction and territorial courts that will resolve disputes arising from this agreement.",
+          "hinglish": "Yeh batata hai ki kisi bhi vivad ya dispute ki sunwayi kis shahar ya state ke court mein hogi.",
+          "why_it_matters": "Dictates which state/country's legal system governs the contract and where court proceedings must be filed.",
+          "user_obligation": "Abide by the terms and standards explicitly delineated in this clause.",
+          "counterparty_obligation": "Reciprocate required notifications and contractual cooperation.",
+          "potential_concern": "Ensure clarity on conditions precedent before signing.",
+          "risk_level": "Informational",
+          "source": {
+            "page": 1,
+            "section": "8. GOVERNING LAW AND ARBITRATION",
+            "snippet": "8. GOVERNING LAW AND ARBITRATION\nThis Agreement shall be governed by the laws of England and Wales / India. Any dispute arising out of this Agreement shall be resolved through binding arbitration under the rules of the I..."
+          },
+          "confidence": 0.94
+        }
+      ],
+      "risks": [],
+      "obligations": [
+        {
+          "id": "ob-1d7df925",
+          "task": "Maintain strict confidentiality over all proprietary data and trade secrets",
+          "responsible_party": "All Parties (Mutual)",
+          "deadline": "Ongoing (Survives termination for 2-5 years)",
+          "source_clause": "Confidentiality & Non-Disclosure Clause",
+          "page_number": 1,
+          "consequence_of_breach": "Immediate injunctive relief, damages claim, and loss of contractual rights",
+          "status": "In Progress"
+        },
+        {
+          "id": "ob-fdd77a70",
+          "task": "Maintain strict confidentiality over all proprietary data and trade secrets",
+          "responsible_party": "All Parties (Mutual)",
+          "deadline": "Ongoing (Survives termination for 2-5 years)",
+          "source_clause": "Confidentiality & Non-Disclosure Clause",
+          "page_number": 1,
+          "consequence_of_breach": "Immediate injunctive relief, damages claim, and loss of contractual rights",
+          "status": "In Progress"
+        },
+        {
+          "id": "ob-cbb30acc",
+          "task": "Maintain strict confidentiality over all proprietary data and trade secrets",
+          "responsible_party": "All Parties (Mutual)",
+          "deadline": "Ongoing (Survives termination for 2-5 years)",
+          "source_clause": "Confidentiality & Non-Disclosure Clause",
+          "page_number": 1,
+          "consequence_of_breach": "Immediate injunctive relief, damages claim, and loss of contractual rights",
+          "status": "In Progress"
+        },
+        {
+          "id": "ob-7c1dc793",
+          "task": "Maintain strict confidentiality over all proprietary data and trade secrets",
+          "responsible_party": "All Parties (Mutual)",
+          "deadline": "Ongoing (Survives termination for 2-5 years)",
+          "source_clause": "Confidentiality & Non-Disclosure Clause",
+          "page_number": 1,
+          "consequence_of_breach": "Immediate injunctive relief, damages claim, and loss of contractual rights",
+          "status": "In Progress"
+        },
+        {
+          "id": "ob-c1352a6c",
+          "task": "Maintain strict confidentiality over all proprietary data and trade secrets",
+          "responsible_party": "All Parties (Mutual)",
+          "deadline": "Ongoing (Survives termination for 2-5 years)",
+          "source_clause": "Confidentiality & Non-Disclosure Clause",
+          "page_number": 1,
+          "consequence_of_breach": "Immediate injunctive relief, damages claim, and loss of contractual rights",
+          "status": "In Progress"
+        },
+        {
+          "id": "ob-b4f040f0",
+          "task": "Maintain strict confidentiality over all proprietary data and trade secrets",
+          "responsible_party": "All Parties (Mutual)",
+          "deadline": "Ongoing (Survives termination for 2-5 years)",
+          "source_clause": "Confidentiality & Non-Disclosure Clause",
+          "page_number": 1,
+          "consequence_of_breach": "Immediate injunctive relief, damages claim, and loss of contractual rights",
+          "status": "In Progress"
+        },
+        {
+          "id": "ob-164305d9",
+          "task": "Maintain strict confidentiality over all proprietary data and trade secrets",
+          "responsible_party": "All Parties (Mutual)",
+          "deadline": "Ongoing (Survives termination for 2-5 years)",
+          "source_clause": "Confidentiality & Non-Disclosure Clause",
+          "page_number": 1,
+          "consequence_of_breach": "Immediate injunctive relief, damages claim, and loss of contractual rights",
+          "status": "In Progress"
+        }
+      ],
+      "timeline": [
+        {
+          "id": "time-c6c2ce0e",
+          "date_text": "Execution Date",
+          "normalized_date": "Start of Term",
+          "event_type": "Agreement Commencement",
+          "description": "Commencement of rights, duties, and covenants under this agreement.",
+          "page_number": 1,
+          "source_clause": "Preamble"
+        }
+      ],
+      "pages_content": [
+        {
+          "page_number": 1,
+          "text": "MUTUAL NON-DISCLOSURE AND PROPRIETARY INFORMATION AGREEMENT\n\nThis Mutual Non-Disclosure Agreement (\"Agreement\") is entered into as of 10th January, 2025 (\"Effective Date\"), by and between:\n\nNEXIS AI INC., a Delaware corporation, having principal offices at 500 Howard Street, San Francisco, CA 94105 (\"Party A\");\nAND\nBHARAT FINTECH TECHNOLOGIES PRIVATE LIMITED, a company organized under the laws of India, having offices at Bandra Kurla Complex, Mumbai 400051 (\"Party B\").\n\n1. PURPOSE\nThe parties wish to explore a potential strategic technology collaboration concerning generative document intelligence (the \"Purpose\"). In connection with the Purpose, each party (\"Disclosing Party\") may disclose confidential technical, financial, and business information to the other party (\"Receiving Party\").\n\n2. CONFIDENTIAL INFORMATION\n\"Confidential Information\" means all non-public information disclosed in tangible, electronic, or oral form, including source code, API designs, algorithmic prompts, financial statements, and customer lists.\n\n3. EXCLUSIONS\nConfidential Information does not include information that: (a) is or becomes publicly known through no breach of Receiving Party; (b) was already known prior to disclosure; (c) is independently developed without reference to the Disclosing Party's information; or (d) is required to be disclosed by applicable court order or statutory requirement.\n\n4. OBLIGATIONS OF RECEIVING PARTY\nThe Receiving Party agrees to: (i) exercise at least reasonable care in protecting the Confidential Information; (ii) not disclose Confidential Information to third parties without prior written consent; and (iii) use Confidential Information exclusively for the stated Purpose.\n\n5. TERM AND SURVIVAL\nThis Agreement shall govern disclosures made for a period of one (1) year from the Effective Date. The confidentiality and non-use obligations with respect to all disclosed Confidential Information shall survive for three (3) years from the date of disclosure; provided that trade secrets shall remain confidential in perpetuity.\n\n6. RETURN OR DESTRUCTION OF MATERIALS\nWithin ten (10) business days following written request from the Disclosing Party or termination of discussions, the Receiving Party shall return or destroy all documents, notes, and electronic copies containing Confidential Information, providing written certification of compliance.\n\n7. INJUNCTIVE RELIEF\nThe parties acknowledge that monetary damages may be inadequate in the event of unauthorized disclosure or breach of this Agreement. Consequently, the Disclosing Party shall be entitled to seek immediate injunctive relief without the necessity of posting a bond.\n\n8. GOVERNING LAW AND ARBITRATION\nThis Agreement shall be governed by the laws of England and Wales / India. Any dispute arising out of this Agreement shall be resolved through binding arbitration under the rules of the International Chamber of Commerce (ICC) or Singapore International Arbitration Centre (SIAC).",
+          "sections": [
+            "1. PURPOSE",
+            "2. CONFIDENTIAL INFORMATION",
+            "3. EXCLUSIONS",
+            "4. OBLIGATIONS OF RECEIVING PARTY",
+            "5. TERM AND SURVIVAL",
+            "6. RETURN OR DESTRUCTION OF MATERIALS",
+            "7. INJUNCTIVE RELIEF",
+            "8. GOVERNING LAW AND ARBITRATION"
+          ]
+        }
+      ]
+    },
+    "doc-demo-saas": {
+      "id": "doc-demo-saas",
+      "filename": "CloudSphere_Enterprise_SaaS_Agreement.pdf",
+      "file_type": "pdf",
+      "file_size": 3398,
+      "page_count": 7,
+      "uploaded_at": "2026-09-21 00:53",
+      "doc_type": "SaaS Service Agreement",
+      "parties": [
+        "CloudSphere Platforms Ltd",
+        "Vertex Enterprises Limited"
+      ],
+      "effective_date": "1st February 2025",
+      "governing_law": "Laws of India (Mumbai jurisdiction)",
+      "jurisdiction": "India / International",
+      "dispute_mechanism": "Arbitration / Designated Courts",
+      "executive_summary": "This is a legally binding SaaS Service Agreement entered into by CloudSphere Platforms Ltd and Vertex Enterprises Limited. Key provisions govern obligations, payment schedules, notice periods, and restrictive covenants. Overall Risk Profile is evaluated at 42/100 with emphasis on termination and liability limits.",
+      "plain_language_summary": "In simple terms, this SaaS Service Agreement defines what each party must deliver and what happens if something goes wrong. Be particularly mindful of the termination notice period and any indemnity commitments before signing.",
+      "hinglish_summary": "Aasan shabdon mein, yeh SaaS Service Agreement CloudSphere Platforms Ltd and Vertex Enterprises Limited ke beech ki zimmedariyon ko tay karta hai. Sign karne se pehle termination notice period, security deposit, aur indemnity clauses ko dhyan se samajh lein.",
+      "risk_score": 42,
+      "risk_breakdown": {
+        "Critical": 1,
+        "High Attention": 0,
+        "Moderate": 1,
+        "Informational": 1
+      },
+      "clauses": [
+        {
+          "id": "clause-5055a129",
+          "clause_type": "payment_terms",
+          "title": "Payment Terms & Monetary Obligations",
+          "original_text": "SECTION 1: SERVICE AVAILABILITY AND SLA\n1.1 Uptime Commitment: Vendor warrants a 99.9% monthly uptime availability for the Cloud Platform, excluding scheduled maintenance windows notified at least 48 hours in advance.\n1.2 Service Credits: If monthly availability drops below 99.9%, Customer shall be entitled to a service credit equivalent to 5% of the monthly subscription fee for every 0.5% downtime increment, capped at 25% of the monthly fee.",
+          "plain_english": "Governs the amount, schedule, invoicing requirements, and late payment penalties.",
+          "hinglish": "Payment kab, kitni aur kaise ki jayegi, aur late hone par kya penalty lagegi.",
+          "why_it_matters": "Sets payment schedules, late fees, interest penalties, and conditions precedent for disbursement.",
+          "user_obligation": "Disburse payments on or before the stated due dates to avoid penalty fees.",
+          "counterparty_obligation": "Issue valid invoices and provide documented deliverables as agreed.",
+          "potential_concern": "Look out for high compounded interest on delayed payments.",
+          "risk_level": "Moderate",
+          "source": {
+            "page": 2,
+            "section": "SECTION 1: SERVICE AVAILABILITY AND SLA",
+            "snippet": "SECTION 1: SERVICE AVAILABILITY AND SLA\n1.1 Uptime Commitment: Vendor warrants a 99.9% monthly uptime availability for the Cloud Platform, excluding scheduled maintenance windows notified at least 48 hours in advance.\n1...."
+          },
+          "confidence": 0.94
+        },
+        {
+          "id": "clause-e506e754",
+          "clause_type": "payment_terms",
+          "title": "Payment Terms & Monetary Obligations",
+          "original_text": "SECTION 2: SUBSCRIPTION FEES AND AUTO-RENEWAL\n2.1 Fees: Customer agrees to pay the annual SaaS subscription fee of USD 48,000 within thirty (30) days of invoice issuance.\n2.2 Auto-Renewal: This Agreement shall automatically renew for successive twelve (12) month terms unless either party gives written notice of non-renewal at least sixty (60) days prior to the expiration of the then-current term.\n2.3 Price Escalation: Vendor reserves the right to increase annual subscription fees by up to 8% upon each annual renewal upon ninety (90) days advance notice.",
+          "plain_english": "Governs the amount, schedule, invoicing requirements, and late payment penalties.",
+          "hinglish": "Payment kab, kitni aur kaise ki jayegi, aur late hone par kya penalty lagegi.",
+          "why_it_matters": "Sets payment schedules, late fees, interest penalties, and conditions precedent for disbursement.",
+          "user_obligation": "Disburse payments on or before the stated due dates to avoid penalty fees.",
+          "counterparty_obligation": "Issue valid invoices and provide documented deliverables as agreed.",
+          "potential_concern": "Look out for high compounded interest on delayed payments.",
+          "risk_level": "Moderate",
+          "source": {
+            "page": 3,
+            "section": "SECTION 2: SUBSCRIPTION FEES AND AUTO-RENEWAL",
+            "snippet": "SECTION 2: SUBSCRIPTION FEES AND AUTO-RENEWAL\n2.1 Fees: Customer agrees to pay the annual SaaS subscription fee of USD 48,000 within thirty (30) days of invoice issuance.\n2.2 Auto-Renewal: This Agreement shall automatica..."
+          },
+          "confidence": 0.94
+        },
+        {
+          "id": "clause-65a21cae",
+          "clause_type": "data_privacy",
+          "title": "Data Protection & Privacy Compliance",
+          "original_text": "SECTION 3: DATA PRIVACY AND DPDP COMPLIANCE\n3.1 Data Fiduciary & Processor: Customer remains the Data Fiduciary and Vendor acts as the Data Processor. Vendor shall process all personal data strictly in adherence to the Digital Personal Data Protection Act, 2023 (India) and EU GDPR.\n3.2 Security Breach Notification: Vendor shall notify Customer in writing within twenty-four (24) hours of becoming aware of any confirmed security compromise or unauthorized access to Customer data.",
+          "plain_english": "Outlines obligations regarding collection, processing, and security of personal identifiable data.",
+          "hinglish": "Users ya employees ke personal data ki suraksha aur privacy se jude niyam.",
+          "why_it_matters": "Governs how personal identifiable data is stored, processed, transferred, and breach-notified under applicable privacy laws.",
+          "user_obligation": "Abide by the terms and standards explicitly delineated in this clause.",
+          "counterparty_obligation": "Reciprocate required notifications and contractual cooperation.",
+          "potential_concern": "Ensure clarity on conditions precedent before signing.",
+          "risk_level": "Moderate",
+          "source": {
+            "page": 4,
+            "section": "SECTION 3: DATA PRIVACY AND DPDP COMPLIANCE",
+            "snippet": "SECTION 3: DATA PRIVACY AND DPDP COMPLIANCE\n3.1 Data Fiduciary & Processor: Customer remains the Data Fiduciary and Vendor acts as the Data Processor. Vendor shall process all personal data strictly in adherence to the D..."
+          },
+          "confidence": 0.94
+        },
+        {
+          "id": "clause-1b058eee",
+          "clause_type": "limitation_of_liability",
+          "title": "Limitation of Liability & Damages Cap",
+          "original_text": "SECTION 4: LIMITATION OF LIABILITY\n4.1 Cap on Liability: To the maximum extent permitted by applicable law, each party's total aggregate liability arising out of or related to this Agreement shall be limited to the total fees actually paid by Customer in the twelve (12) months preceding the event giving rise to liability.\n4.2 Exclusion of Consequential Damages: In no event shall either party be liable for lost profits, loss of business, or consequential, punitive, or indirect damages.",
+          "plain_english": "Restricts the total financial compensation either party can recover in the event of a breach or dispute.",
+          "hinglish": "Agar doosri party contract todti hai, toh aapko milne wala compensation ek tay seema (cap) tak hi limited rahega.",
+          "why_it_matters": "Caps the financial recovery you can claim if the other party breaches, often excluding lost profits or consequential damages.",
+          "user_obligation": "Accept that damages claims against the counterparty may be strictly capped.",
+          "counterparty_obligation": "Remain bound by the agreed liability ceiling in case of operational failure or breach.",
+          "potential_concern": "Check if the liability cap excludes critical matters like IP infringement or confidentiality.",
+          "risk_level": "High Attention",
+          "source": {
+            "page": 5,
+            "section": "SECTION 4: LIMITATION OF LIABILITY",
+            "snippet": "SECTION 4: LIMITATION OF LIABILITY\n4.1 Cap on Liability: To the maximum extent permitted by applicable law, each party's total aggregate liability arising out of or related to this Agreement shall be limited to the total..."
+          },
+          "confidence": 0.94
+        },
+        {
+          "id": "clause-8592a11d",
+          "clause_type": "indemnification",
+          "title": "Indemnity & Defense Obligations",
+          "original_text": "SECTION 5: INDEMNIFICATION\n5.1 Vendor IP Indemnity: Vendor shall defend Customer against any third-party patent or copyright infringement claim resulting from authorized use of the Cloud Platform and pay all resulting final court judgments.\n5.2 Customer Indemnity: Customer shall indemnify and hold Vendor harmless against any third-party claims arising from Customer's unauthorized content or violation of applicable privacy legislation.",
+          "plain_english": "Requires one party to compensate or defend the other for specific losses, liabilities, or legal claims.",
+          "hinglish": "Agar koi third party nuksan ya claim karti hai, toh uske kharche aur liability aapko uthani pad sakti hai.",
+          "why_it_matters": "Can shift massive third-party legal liabilities, defense fees, or damage claims onto you if someone sues or alleges losses.",
+          "user_obligation": "Potentially reimburse counterparty for third-party damages, claims, and legal costs.",
+          "counterparty_obligation": "Give prompt notice of any claim subject to indemnification.",
+          "potential_concern": "Broad uncapped indemnity could expose you to liabilities outside your immediate direct control.",
+          "risk_level": "Critical",
+          "source": {
+            "page": 6,
+            "section": "SECTION 5: INDEMNIFICATION",
+            "snippet": "SECTION 5: INDEMNIFICATION\n5.1 Vendor IP Indemnity: Vendor shall defend Customer against any third-party patent or copyright infringement claim resulting from authorized use of the Cloud Platform and pay all resulting fi..."
+          },
+          "confidence": 0.94
+        },
+        {
+          "id": "clause-623272c0",
+          "clause_type": "termination",
+          "title": "Termination and Notice Period",
+          "original_text": "SECTION 6: TERMINATION\n6.1 Termination for Cause: Either party may terminate this Agreement immediately upon written notice if the other party materially breaches any term and fails to cure such breach within thirty (30) days of written notice.\n6.2 Data Retrieval: Upon termination, Customer shall have thirty (30) days to extract all stored data in standard JSON or CSV format, after which Vendor shall securely purge all Customer databases.",
+          "plain_english": "Outlines the procedures, timelines, and grounds required to terminate this agreement.",
+          "hinglish": "Yeh batata hai ki contract kaise khatam kiya ja sakta hai aur kitne din pehle written notice dena hoga.",
+          "why_it_matters": "Dictates how and under what conditions either party can exit the contract, and potential penalties or notice periods required.",
+          "user_obligation": "Provide formal written notice within the required notice period before terminating.",
+          "counterparty_obligation": "Settle outstanding dues and transition active responsibilities upon notice receipt.",
+          "potential_concern": "Review if termination with or without cause triggers any immediate forfeit or repayment clause.",
+          "risk_level": "Moderate",
+          "source": {
+            "page": 7,
+            "section": "SECTION 6: TERMINATION",
+            "snippet": "SECTION 6: TERMINATION\n6.1 Termination for Cause: Either party may terminate this Agreement immediately upon written notice if the other party materially breaches any term and fails to cure such breach within thirty (30)..."
+          },
+          "confidence": 0.94
+        },
+        {
+          "id": "clause-c52860fb",
+          "clause_type": "governing_law",
+          "title": "Governing Law & Exclusive Jurisdiction",
+          "original_text": "SECTION 7: GOVERNING LAW\nThis Agreement shall be governed by and construed in accordance with the laws of India, and courts at Mumbai shall have exclusive jurisdiction.",
+          "plain_english": "Specifies the legal jurisdiction and territorial courts that will resolve disputes arising from this agreement.",
+          "hinglish": "Yeh batata hai ki kisi bhi vivad ya dispute ki sunwayi kis shahar ya state ke court mein hogi.",
+          "why_it_matters": "Dictates which state/country's legal system governs the contract and where court proceedings must be filed.",
+          "user_obligation": "Abide by the terms and standards explicitly delineated in this clause.",
+          "counterparty_obligation": "Reciprocate required notifications and contractual cooperation.",
+          "potential_concern": "Ensure clarity on conditions precedent before signing.",
+          "risk_level": "Informational",
+          "source": {
+            "page": 7,
+            "section": "SECTION 7: GOVERNING LAW",
+            "snippet": "SECTION 7: GOVERNING LAW\nThis Agreement shall be governed by and construed in accordance with the laws of India, and courts at Mumbai shall have exclusive jurisdiction."
+          },
+          "confidence": 0.94
+        }
+      ],
+      "risks": [
+        {
+          "id": "risk-cc0f77d4",
+          "title": "Capped Liability for Counterparty Breach",
+          "severity": "Moderate",
+          "detected_issue": "The counterparty's financial liability is strictly limited (e.g. to fees paid in the last 1-3 months).",
+          "why_it_matters": "If the counterparty causes severe disruption, data loss, or breaches confidentiality, your financial recovery is constrained.",
+          "potential_user_impact": "Limited legal remedy or recovery in case of gross negligence or operational default.",
+          "source_clause_id": "clause-1b058eee",
+          "source_text": "SECTION 4: LIMITATION OF LIABILITY\n4.1 Cap on Liability: To the maximum extent permitted by applicable law, each party's total aggregate liability arising out of or related to this Agreement shall be limited to the total...",
+          "page_number": 5,
+          "suggested_lawyer_question": "Is the liability limitation mutual, and does it preserve uncapped liability for confidentiality and gross negligence?"
+        },
+        {
+          "id": "risk-e387e469",
+          "title": "Unusually Broad Indemnification Obligation",
+          "severity": "Critical",
+          "detected_issue": "The indemnity clause appears to require one party to cover a wide spectrum of third-party claims and defense costs.",
+          "why_it_matters": "If a third party files a lawsuit or claims damages against the counterparty, this provision might obligate you to pay their legal defense and settlement costs, even for events beyond your sole control.",
+          "potential_user_impact": "Potentially unbounded financial liability if legal disputes arise from work deliverables or software.",
+          "source_clause_id": "clause-8592a11d",
+          "source_text": "SECTION 5: INDEMNIFICATION\n5.1 Vendor IP Indemnity: Vendor shall defend Customer against any third-party patent or copyright infringement claim resulting from authorized use of the Cloud Platform and pay all resulting fi...",
+          "page_number": 6,
+          "suggested_lawyer_question": "Does this indemnity obligation expose me to liabilities beyond my direct willful misconduct or breach, and can we cap it?"
+        },
+        {
+          "id": "risk-dd8224af",
+          "title": "Designated Exclusive Judicial Forum",
+          "severity": "Informational",
+          "detected_issue": "Exclusive dispute resolution is designated to courts of a specific city or jurisdiction.",
+          "why_it_matters": "Litigating or filing claims will require hiring counsel and appearing in that specific geographical forum.",
+          "potential_user_impact": "Increased logistical and travel expenses if litigation or court intervention becomes necessary.",
+          "source_clause_id": "clause-c52860fb",
+          "source_text": "SECTION 7: GOVERNING LAW\nThis Agreement shall be governed by and construed in accordance with the laws of India, and courts at Mumbai shall have exclusive jurisdiction.",
+          "page_number": 7,
+          "suggested_lawyer_question": "Does this jurisdiction choice pose significant practical inconvenience or cost hurdles for me?"
+        }
+      ],
+      "obligations": [
+        {
+          "id": "ob-c22ae8f1",
+          "task": "Disburse agreed payments/fees on or before the due date",
+          "responsible_party": "Paying Party / User",
+          "deadline": "Per agreed invoice schedule",
+          "source_clause": "Payment & Consideration Clause",
+          "page_number": 2,
+          "consequence_of_breach": "Interest charge on overdue amounts, late fees, or contractual default proceedings",
+          "status": "Pending"
+        },
+        {
+          "id": "ob-cbe616ff",
+          "task": "Disburse agreed payments/fees on or before the due date",
+          "responsible_party": "Paying Party / User",
+          "deadline": "Per agreed invoice schedule",
+          "source_clause": "Payment & Consideration Clause",
+          "page_number": 3,
+          "consequence_of_breach": "Interest charge on overdue amounts, late fees, or contractual default proceedings",
+          "status": "Pending"
+        },
+        {
+          "id": "ob-7cae1aaf",
+          "task": "Promptly report any suspected data breach or security incident to the data fiduciary",
+          "responsible_party": "Data Processor / User",
+          "deadline": "Within 24 to 72 hours of discovery",
+          "source_clause": "Data Protection & Incident Reporting",
+          "page_number": 4,
+          "consequence_of_breach": "Regulatory fines under the Digital Personal Data Protection (DPDP) framework",
+          "status": "Pending"
+        },
+        {
+          "id": "ob-f3034495",
+          "task": "Serve written notice at least 30 days prior to intending to terminate agreement",
+          "responsible_party": "Either Party",
+          "deadline": "30 days before exit",
+          "source_clause": "Termination & Notice Provision",
+          "page_number": 7,
+          "consequence_of_breach": "Premature exit without notice may result in forfeiture of deposit or salary in lieu of notice",
+          "status": "Pending"
+        }
+      ],
+      "timeline": [
+        {
+          "id": "time-28d383d1",
+          "date_text": "Execution Date",
+          "normalized_date": "Start of Term",
+          "event_type": "Agreement Commencement",
+          "description": "Commencement of rights, duties, and covenants under this agreement.",
+          "page_number": 1,
+          "source_clause": "Preamble"
+        },
+        {
+          "id": "time-29627ab4",
+          "date_text": "5th of Every Month",
+          "normalized_date": "Recurring Monthly Due",
+          "event_type": "Payment Deadline",
+          "description": "Monthly consideration/rent or service fees payable to avoid default interest.",
+          "page_number": 2,
+          "source_clause": "Payment Terms & Monetary Obligations"
+        },
+        {
+          "id": "time-0815cf2a",
+          "date_text": "5th of Every Month",
+          "normalized_date": "Recurring Monthly Due",
+          "event_type": "Payment Deadline",
+          "description": "Monthly consideration/rent or service fees payable to avoid default interest.",
+          "page_number": 3,
+          "source_clause": "Payment Terms & Monetary Obligations"
+        },
+        {
+          "id": "time-eb1b4912",
+          "date_text": "30-60 Days Prior to Desired Exit",
+          "normalized_date": "Notice Deadline",
+          "event_type": "Formal Notice Window",
+          "description": "Earliest timestamp to deliver formal written notice to counterparty for planned termination.",
+          "page_number": 7,
+          "source_clause": "Termination and Notice Period"
+        }
+      ],
+      "pages_content": [
+        {
+          "page_number": 1,
+          "text": "ENTERPRISE CLOUD SERVICE LEVEL AGREEMENT (SaaS)\n\nThis Master Cloud Services Agreement (\"Agreement\") is effective as of February 1, 2025, between:\nCLOUDSPHERE PLATFORMS LTD (\"Vendor\"), with registered offices at Cyber City, Ebene, Mauritius; and\nVERTEX ENTERPRISES LIMITED (\"Customer\"), having its corporate headquarters at Nariman Point, Mumbai 400021, India.",
+          "sections": []
+        },
+        {
+          "page_number": 2,
+          "text": "SECTION 1: SERVICE AVAILABILITY AND SLA\n1.1 Uptime Commitment: Vendor warrants a 99.9% monthly uptime availability for the Cloud Platform, excluding scheduled maintenance windows notified at least 48 hours in advance.\n1.2 Service Credits: If monthly availability drops below 99.9%, Customer shall be entitled to a service credit equivalent to 5% of the monthly subscription fee for every 0.5% downtime increment, capped at 25% of the monthly fee.",
+          "sections": []
+        },
+        {
+          "page_number": 3,
+          "text": "SECTION 2: SUBSCRIPTION FEES AND AUTO-RENEWAL\n2.1 Fees: Customer agrees to pay the annual SaaS subscription fee of USD 48,000 within thirty (30) days of invoice issuance.\n2.2 Auto-Renewal: This Agreement shall automatically renew for successive twelve (12) month terms unless either party gives written notice of non-renewal at least sixty (60) days prior to the expiration of the then-current term.\n2.3 Price Escalation: Vendor reserves the right to increase annual subscription fees by up to 8% upon each annual renewal upon ninety (90) days advance notice.",
+          "sections": []
+        },
+        {
+          "page_number": 4,
+          "text": "SECTION 3: DATA PRIVACY AND DPDP COMPLIANCE\n3.1 Data Fiduciary & Processor: Customer remains the Data Fiduciary and Vendor acts as the Data Processor. Vendor shall process all personal data strictly in adherence to the Digital Personal Data Protection Act, 2023 (India) and EU GDPR.\n3.2 Security Breach Notification: Vendor shall notify Customer in writing within twenty-four (24) hours of becoming aware of any confirmed security compromise or unauthorized access to Customer data.",
+          "sections": []
+        },
+        {
+          "page_number": 5,
+          "text": "SECTION 4: LIMITATION OF LIABILITY\n4.1 Cap on Liability: To the maximum extent permitted by applicable law, each party's total aggregate liability arising out of or related to this Agreement shall be limited to the total fees actually paid by Customer in the twelve (12) months preceding the event giving rise to liability.\n4.2 Exclusion of Consequential Damages: In no event shall either party be liable for lost profits, loss of business, or consequential, punitive, or indirect damages.",
+          "sections": []
+        },
+        {
+          "page_number": 6,
+          "text": "SECTION 5: INDEMNIFICATION\n5.1 Vendor IP Indemnity: Vendor shall defend Customer against any third-party patent or copyright infringement claim resulting from authorized use of the Cloud Platform and pay all resulting final court judgments.\n5.2 Customer Indemnity: Customer shall indemnify and hold Vendor harmless against any third-party claims arising from Customer's unauthorized content or violation of applicable privacy legislation.",
+          "sections": []
+        },
+        {
+          "page_number": 7,
+          "text": "SECTION 6: TERMINATION\n6.1 Termination for Cause: Either party may terminate this Agreement immediately upon written notice if the other party materially breaches any term and fails to cure such breach within thirty (30) days of written notice.\n6.2 Data Retrieval: Upon termination, Customer shall have thirty (30) days to extract all stored data in standard JSON or CSV format, after which Vendor shall securely purge all Customer databases.\n\nSECTION 7: GOVERNING LAW\nThis Agreement shall be governed by and construed in accordance with the laws of India, and courts at Mumbai shall have exclusive jurisdiction.",
+          "sections": []
+        }
+      ]
+    }
+  },
+  "legal_info": [
+    {
+      "term": "Indemnity",
+      "plain_meaning": "A contractual promise by one party to compensate the other for specified loss or damage caused by the conduct of the promisor or a third party.",
+      "why_it_matters": "Indemnity clauses can shift huge financial liabilities and legal defense expenses onto you. Under Indian law, an indemnified party can claim damages even before incurring actual out-of-pocket loss once liability becomes absolute.",
+      "common_in": [
+        "Employment Contracts",
+        "Vendor Agreements",
+        "SaaS SLAs",
+        "Leases"
+      ],
+      "statutory_framework": "Section 124 of the Indian Contract Act, 1872 defines a contract of indemnity as a contract by which one party promises to save the other from loss caused to him by the conduct of the promisor himself, or by the conduct of any other person.",
+      "india_code_reference": "Indian Contract Act, 1872 (Act No. 9 of 1872), Section 124 & 125",
+      "case_law_doctrine": "Gajanan Moreshwar Parelkar v. Moreshwar Madan Mantri (1942 Bom LR) held that the indemnified party can compel the indemnifier to place him in a position to meet the liability before actual payment.",
+      "sample_clause": "\"The Service Provider shall indemnify, defend, and hold harmless the Client against any third-party claims arising from a breach of warranties or intellectual property infringement.\""
+    },
+    {
+      "term": "Non-Compete Covenants (Section 27)",
+      "plain_meaning": "A contractual restriction preventing an employee or contractor from engaging in or establishing a competing business during or after termination.",
+      "why_it_matters": "While employers frequently include post-employment non-compete clauses, Indian courts consistently hold that any agreement restraining a person from exercising a lawful profession, trade, or business is void.",
+      "common_in": [
+        "Employment Agreements",
+        "Consultancy Contracts",
+        "Co-Founder Agreements"
+      ],
+      "statutory_framework": "Section 27 of the Indian Contract Act, 1872 states: 'Every agreement by which any one is restrained from exercising a lawful profession, trade or business of any kind, is to that extent void.'",
+      "india_code_reference": "Indian Contract Act, 1872, Section 27 (Agreement in restraint of trade, void)",
+      "case_law_doctrine": "Percept D'Mark (India) (P) Ltd. v. Zaheer Khan (2006 4 SCC 227) & Niranjan Shankar Golikari v. Century Spg. & Mfg. Co. Ltd. (AIR 1967 SC 1098) - Negative covenants operative during the period of contract are valid, but post-contract restraints are void under Section 27.",
+      "sample_clause": "\"Employee covenants that for a period of 12 months following cessation of employment, they shall not engage in any competing software development business within India.\""
+    },
+    {
+      "term": "Force Majeure",
+      "plain_meaning": "A provision relieving parties from contractual liabilities when extraordinary, unforeseeable events outside their reasonable control make performance impossible or impracticable.",
+      "why_it_matters": "Prevents breach of contract claims during wars, natural disasters, floods, epidemics, or sudden statutory government prohibitions.",
+      "common_in": [
+        "Commercial Leases",
+        "Construction Contracts",
+        "Supply Chain Agreements"
+      ],
+      "statutory_framework": "Under Indian law, Force Majeure operates as a contractual clause. Where no clause exists, the doctrine of frustration under Section 56 of the Indian Contract Act, 1872 applies, discharging the contract if performance becomes impossible or unlawful.",
+      "india_code_reference": "Indian Contract Act, 1872, Section 32 (Contingent contracts) and Section 56 (Agreement to do impossible act)",
+      "case_law_doctrine": "Energy Watchdog v. CERC (2017 14 SCC 80) affirmed that force majeure clauses are strictly construed; mere commercial unviability or price escalation does not constitute frustration.",
+      "sample_clause": "\"Neither party shall be liable for failure or delay in performing obligations if such failure arises from acts of God, flood, pandemic, or civil disturbance beyond reasonable control.\""
+    },
+    {
+      "term": "Arbitration & Dispute Resolution",
+      "plain_meaning": "A private, legally binding method of resolving disputes outside traditional government courts through independent arbitrators.",
+      "why_it_matters": "Arbitration can be faster and confidential, but private arbitrator fees and administrative costs can be significant for individuals. Under Indian law, an arbitral award has the force of a civil court decree.",
+      "common_in": [
+        "Partnership Deeds",
+        "Employment Agreements",
+        "SaaS Agreements",
+        "Commercial Contracts"
+      ],
+      "statutory_framework": "Arbitration and Conciliation Act, 1996 (as amended in 2015, 2019, 2021) based on the UNCITRAL Model Law.",
+      "india_code_reference": "Arbitration and Conciliation Act, 1996 (Act No. 26 of 1996), Section 7 (Arbitration agreement) & Section 8",
+      "case_law_doctrine": "Vidya Drolia v. Durga Trading Corporation (2021 2 SCC 1) established the four-fold test for arbitrability of disputes in India.",
+      "sample_clause": "\"Any dispute or difference arising out of or in connection with this contract shall be referred to and finally resolved by sole arbitration in accordance with the Arbitration and Conciliation Act, 1996. The seat shall be New Delhi.\""
+    },
+    {
+      "term": "Liquidated Damages vs Penalty",
+      "plain_meaning": "A pre-determined monetary amount specified in the agreement to be paid as compensation if one party breaches the contract.",
+      "why_it_matters": "Unlike English common law, Indian courts under Section 74 of the Contract Act do not enforce punitive penalties; only 'reasonable compensation' up to the stipulated sum is awarded upon proof of actual or genuine loss.",
+      "common_in": [
+        "Employment Lock-In Clauses",
+        "Construction Contracts",
+        "Non-Disclosure Agreements"
+      ],
+      "statutory_framework": "Section 74 of the Indian Contract Act, 1872 (Compensation for breach of contract where penalty stipulated for).",
+      "india_code_reference": "Indian Contract Act, 1872, Section 74",
+      "case_law_doctrine": "Kailash Nath Associates v. DDA (2015 4 SCC 136) held that reasonable compensation is the measure of damages; where loss is quantifiable, it must be proven before forfeiture is permitted.",
+      "sample_clause": "\"In the event Employee terminates employment during the lock-in period, Employee agrees to pay INR 2,00,000 as liquidated damages representing training and replacement expenditure.\""
+    },
+    {
+      "term": "Data Fiduciary Obligations (DPDP Act 2023)",
+      "plain_meaning": "Legal obligations imposed on entities that determine the purpose and means of processing personal identifiable digital data.",
+      "why_it_matters": "Entities collecting data must obtain informed, unambiguous consent, implement reasonable security safeguards, and promptly report data breaches to the Data Protection Board and affected users.",
+      "common_in": [
+        "Privacy Policies",
+        "SaaS Master Subscription Agreements",
+        "Consumer Terms of Service"
+      ],
+      "statutory_framework": "Digital Personal Data Protection Act, 2023 (DPDP Act 2023, Act No. 22 of 2023).",
+      "india_code_reference": "DPDP Act, 2023, Section 4 (Grounds for processing) & Section 8 (General obligations of Data Fiduciary)",
+      "case_law_doctrine": "Justice K.S. Puttaswamy (Retd.) v. Union of India (2017 10 SCC 1) recognized the fundamental right to privacy under Article 21 of the Constitution of India.",
+      "sample_clause": "\"The Company shall process all personal data strictly in compliance with the Digital Personal Data Protection Act, 2023, ensuring encryption at rest and in transit.\""
+    },
+    {
+      "term": "Employee vs Independent Contractor",
+      "plain_meaning": "The legal distinction between a hired worker subject to direct supervision and control (employee) versus a self-employed professional contracted for a specific deliverable (independent contractor).",
+      "why_it_matters": "Misclassification carries substantial liability for unpaid provident fund (PF), gratuity, state insurance (ESIC), and labour law benefits.",
+      "common_in": [
+        "Consultancy Agreements",
+        "Freelance Service Contracts",
+        "Gig Work Terms"
+      ],
+      "statutory_framework": "Code on Social Security, 2020; Industrial Disputes Act, 1947; Employees' Provident Funds and Miscellaneous Provisions Act, 1952.",
+      "india_code_reference": "Labour Codes framework; Section 2(s) of Industrial Disputes Act, 1947 (Workman definition)",
+      "case_law_doctrine": "Sushilaben Indravadan Gandhi v. New India Assurance Co. Ltd. (2021 7 SCC 151) applied the modern multi-factor test of economic reality, integration, and control.",
+      "sample_clause": "\"The relationship of Consultant to Company is that of an independent contractor. Nothing herein shall be construed to create an employer-employee, agency, or joint venture relationship.\""
+    }
+  ],
+  "observability": {
+    "citation_accuracy_target": "100%",
+    "measured_citation_accuracy": "98.4%",
+    "unsupported_claim_rate": "0.0%",
+    "hallucination_guard_status": "Active & Enforced",
+    "average_retrieval_latency_ms": 18.4,
+    "active_documents_indexed": 4,
+    "total_clauses_extracted": 29,
+    "total_risks_identified": 11,
+    "supported_jurisdictions": [
+      "India",
+      "United States",
+      "United Kingdom",
+      "Global"
+    ],
+    "cache_metrics": {
+      "hits": 0,
+      "misses": 6,
+      "total_requests": 6,
+      "hit_ratio_percent": 0.0,
+      "cached_entries": 6,
+      "max_capacity": 2000
+    },
+    "rag_cache_metrics": {
+      "hits": 0,
+      "misses": 0,
+      "total_requests": 0,
+      "hit_ratio_percent": 0.0,
+      "cached_entries": 0,
+      "max_capacity": 1000
+    },
+    "security_hardening": {
+      "owasp_headers": true,
+      "rate_limiting": "150 req/min",
+      "path_traversal_protection": true,
+      "magic_number_validation": true,
+      "strict_cors": true
+    }
+  }
+}

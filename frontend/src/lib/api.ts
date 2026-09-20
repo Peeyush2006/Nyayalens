@@ -12,6 +12,18 @@ export const getApiBase = (): string => {
 
 export const API_BASE = getApiBase();
 
+import {
+  fallbackGetDocuments,
+  fallbackGetDocumentDetail,
+  fallbackUploadDocument,
+  fallbackAskDocument,
+  fallbackUpdateObligation,
+  fallbackCompareDocuments,
+  fallbackGetLawyerBrief,
+  fallbackGetLegalConcepts,
+  fallbackGetObservability
+} from "./fallbackService";
+
 export interface SourceReference {
   page: number;
   section?: string;
@@ -238,67 +250,106 @@ async function handleApiResponse<T>(res: Response, defaultMessage: string): Prom
 }
 
 export async function fetchDocuments(): Promise<DocumentMetadata[]> {
-  const res = await apiFetch("/documents");
-  return handleApiResponse<DocumentMetadata[]>(res, "Failed to fetch documents");
+  try {
+    const res = await apiFetch("/documents");
+    return await handleApiResponse<DocumentMetadata[]>(res, "Failed to fetch documents");
+  } catch (e) {
+    console.warn("Backend API unavailable, using embedded documents:", e);
+    return fallbackGetDocuments();
+  }
 }
 
 export async function fetchDocumentDetail(docId: string): Promise<DocumentDetail> {
-  const res = await apiFetch(`/documents/${docId}`);
-  return handleApiResponse<DocumentDetail>(res, `Failed to fetch document ${docId}`);
+  try {
+    const res = await apiFetch(`/documents/${docId}`);
+    return await handleApiResponse<DocumentDetail>(res, `Failed to fetch document ${docId}`);
+  } catch (e) {
+    console.warn("Backend API unavailable, using embedded document detail:", e);
+    return fallbackGetDocumentDetail(docId);
+  }
 }
 
 export async function uploadDocument(file: File): Promise<DocumentDetail> {
-  const formData = new FormData();
-  formData.append("file", file);
-  const res = await apiFetch("/documents/upload", {
-    method: "POST",
-    body: formData,
-  });
-  return handleApiResponse<DocumentDetail>(res, "Failed to upload document");
+  try {
+    const formData = new FormData();
+    formData.append("file", file);
+    const res = await apiFetch("/documents/upload", {
+      method: "POST",
+      body: formData,
+    });
+    return await handleApiResponse<DocumentDetail>(res, "Failed to upload document");
+  } catch (e) {
+    console.warn("Backend API unavailable, processing upload with embedded intelligence engine:", e);
+    return await fallbackUploadDocument(file);
+  }
 }
 
 export async function askDocument(docId: string, question: string, language: string = "english"): Promise<GroundedAnswer> {
-  const res = await apiFetch(`/documents/${docId}/ask`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ question, language, jurisdiction: "India" }),
-  });
-  return handleApiResponse<GroundedAnswer>(res, "Failed to query document");
+  try {
+    const res = await apiFetch(`/documents/${docId}/ask`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ question, language, jurisdiction: "India" }),
+    });
+    return await handleApiResponse<GroundedAnswer>(res, "Failed to query document");
+  } catch (e) {
+    return fallbackAskDocument(docId, question, language);
+  }
 }
 
 export async function updateObligationStatus(docId: string, obId: string, status: string): Promise<DocumentDetail> {
-  const res = await apiFetch(`/documents/${docId}/obligations/${obId}?status=${status}`, {
-    method: "PATCH",
-  });
-  return handleApiResponse<DocumentDetail>(res, "Failed to update obligation status");
+  try {
+    const res = await apiFetch(`/documents/${docId}/obligations/${obId}?status=${status}`, {
+      method: "PATCH",
+    });
+    return await handleApiResponse<DocumentDetail>(res, "Failed to update obligation status");
+  } catch (e) {
+    return fallbackUpdateObligation(docId, obId, status);
+  }
 }
 
 export async function compareDocuments(docAId: string, docBId: string): Promise<ComparisonResult> {
-  const res = await apiFetch(`/compare?doc_a_id=${docAId}&doc_b_id=${docBId}`, {
-    method: "POST",
-  });
-  return handleApiResponse<ComparisonResult>(res, "Failed to compare documents");
+  try {
+    const res = await apiFetch(`/compare?doc_a_id=${docAId}&doc_b_id=${docBId}`, {
+      method: "POST",
+    });
+    return await handleApiResponse<ComparisonResult>(res, "Failed to compare documents");
+  } catch (e) {
+    return fallbackCompareDocuments(docAId, docBId);
+  }
 }
 
 export async function fetchLawyerBrief(docId: string, userNotes: string = ""): Promise<LawyerConsultationBrief> {
-  const formData = new FormData();
-  formData.append("user_notes", userNotes);
-  const res = await apiFetch(`/documents/${docId}/lawyer-brief`, {
-    method: "POST",
-    body: formData,
-  });
-  return handleApiResponse<LawyerConsultationBrief>(res, "Failed to generate lawyer consultation brief");
+  try {
+    const formData = new FormData();
+    formData.append("user_notes", userNotes);
+    const res = await apiFetch(`/documents/${docId}/lawyer-brief`, {
+      method: "POST",
+      body: formData,
+    });
+    return await handleApiResponse<LawyerConsultationBrief>(res, "Failed to generate lawyer consultation brief");
+  } catch (e) {
+    return fallbackGetLawyerBrief(docId, userNotes);
+  }
 }
 
 export async function fetchLegalConcepts(query?: string, jurisdiction: string = "India"): Promise<LegalConcept[]> {
-  const endpoint = query
-    ? `/legal-info?q=${encodeURIComponent(query)}&jurisdiction=${jurisdiction}`
-    : `/legal-info?jurisdiction=${jurisdiction}`;
-  const res = await apiFetch(endpoint);
-  return handleApiResponse<LegalConcept[]>(res, "Failed to fetch legal knowledge concepts");
+  try {
+    const endpoint = query
+      ? `/legal-info?q=${encodeURIComponent(query)}&jurisdiction=${jurisdiction}`
+      : `/legal-info?jurisdiction=${jurisdiction}`;
+    const res = await apiFetch(endpoint);
+    return await handleApiResponse<LegalConcept[]>(res, "Failed to fetch legal knowledge concepts");
+  } catch (e) {
+    return fallbackGetLegalConcepts(query);
+  }
 }
 
 export async function fetchObservability(): Promise<Record<string, any>> {
-  const res = await apiFetch("/observability");
-  return handleApiResponse<Record<string, any>>(res, "Failed to fetch observability metrics");
+  try {
+    const res = await apiFetch("/observability");
+    return await handleApiResponse<Record<string, any>>(res, "Failed to fetch observability metrics");
+  } catch (e) {
+    return fallbackGetObservability();
+  }
 }
