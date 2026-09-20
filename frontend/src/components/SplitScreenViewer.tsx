@@ -588,52 +588,24 @@ export default function SplitScreenViewer({
                         handleSendMessage(risk.suggested_lawyer_question);
                       }}
                       className="ml-3 px-3 py-1.5 rounded-lg bg-slate-950 text-white text-xs font-semibold hover:bg-slate-900 transition-colors whitespace-nowrap shadow-2xs"
-              {doc.risks.map((risk) => {
-                const colors = getRiskColor(risk.severity);
-                return (
-                  <div
-                    key={risk.id}
-                    className="bg-white rounded-2xl border border-slate-200/80 p-5 shadow-xs hover:border-slate-300 transition-all space-y-3"
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold border uppercase tracking-wide flex items-center space-x-1 ${colors.badge}`}>
-                        <AlertTriangle className="w-3 h-3 mr-1 inline" aria-hidden="true" />
-                        {risk.severity} Risk: {risk.category}
-                      </span>
-                      <span className="text-xs text-slate-400 font-mono">Impact Score: {risk.score}/10</span>
-                    </div>
-
-                    <div>
-                      <h4 className="text-xs font-bold text-slate-900">{risk.title}</h4>
-                      <p className="text-xs text-slate-700 mt-1 leading-relaxed">{risk.description}</p>
-                    </div>
-
-                    <div className="bg-slate-50 border border-slate-200/80 p-3 rounded-xl text-xs space-y-1">
-                      <span className="font-bold text-slate-900">Why this matters:</span>
-                      <p className="text-slate-600 leading-relaxed">{risk.legal_impact}</p>
-                    </div>
-
-                    {risk.recommended_negotiation && (
-                      <div className="bg-indigo-50/60 border border-indigo-100 p-3 rounded-xl text-xs space-y-1">
-                        <span className="font-bold text-indigo-950">Recommended Counter-Proposal:</span>
-                        <p className="text-indigo-900 leading-relaxed">{risk.recommended_negotiation}</p>
-                      </div>
-                    )}
-
-                    <div className="flex items-center justify-between text-xs text-slate-400 pt-1">
-                      <span>Source: Page {risk.page_number}</span>
-                      <button
-                        onClick={() => jumpToPage(risk.page_number, risk.source_text)}
-                        aria-label={`Highlight source clause on page ${risk.page_number}`}
-                        className="text-indigo-600 hover:underline font-semibold inline-flex items-center space-x-1"
-                      >
-                        <span>Highlight Source Clause</span>
-                        <ChevronRight className="w-3.5 h-3.5" aria-hidden="true" />
-                      </button>
-                    </div>
+                    >
+                      Ask in Chat
+                    </button>
                   </div>
-                );
-              })}
+
+                  <div className="flex items-center justify-between text-xs text-slate-400 pt-1">
+                    <span>Source: Page {risk.page_number}</span>
+                    <button
+                      onClick={() => jumpToPage(risk.page_number, risk.source_text)}
+                      aria-label={`Highlight source clause on page ${risk.page_number}`}
+                      className="text-indigo-600 hover:underline font-semibold inline-flex items-center space-x-1"
+                    >
+                      <span>Highlight Source Clause</span>
+                      <ChevronRight className="w-3.5 h-3.5" aria-hidden="true" />
+                    </button>
+                  </div>
+                </div>
+              ))}
             </div>
           )}
 
