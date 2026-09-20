@@ -597,7 +597,8 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
-      </main>
+      </section>
+    </main>
 
       {/* Footer */}
       <footer role="contentinfo" className="bg-slate-950 text-slate-400 py-12 border-t border-slate-900 text-xs">
