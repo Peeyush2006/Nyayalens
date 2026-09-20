@@ -16,9 +16,11 @@ class SecurityHeadersMiddleware(BaseHTTPMiddleware):
         response.headers["X-Frame-Options"] = "DENY"
         response.headers["X-XSS-Protection"] = "1; mode=block"
         response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
-        response.headers["Permissions-Policy"] = "camera=(), microphone=(), geolocation=()"
-        response.headers["Strict-Transport-Security"] = "max-age=31536000; includeSubDomains"
+        response.headers["Permissions-Policy"] = "camera=(), microphone=(), geolocation=(), payment=()"
+        response.headers["Strict-Transport-Security"] = "max-age=31536000; includeSubDomains; preload"
         response.headers["Content-Security-Policy"] = "default-src 'self'; frame-ancestors 'none';"
+        response.headers["Cross-Origin-Opener-Policy"] = "same-origin"
+        response.headers["Cross-Origin-Resource-Policy"] = "same-origin"
         return response
 
 class RateLimiterMiddleware(BaseHTTPMiddleware):
@@ -71,9 +73,11 @@ class PerformanceTimingMiddleware(BaseHTTPMiddleware):
         process_time_ms = (time.perf_counter() - start_time) * 1000.0
         response.headers["X-Process-Time-Ms"] = f"{process_time_ms:.2f}"
         
-        # Add client-side cache header for GET endpoints
+        # Add client-side cache header & ETag for GET endpoints
         if request.method == "GET" and request.url.path.startswith("/api"):
-            response.headers["Cache-Control"] = "public, max-age=60, stale-while-revalidate=300"
+            response.headers["Cache-Control"] = "public, max-age=3600, stale-while-revalidate=86400"
+            path_hash = hex(abs(hash(request.url.path)))[2:10]
+            response.headers["ETag"] = f'W/"nyaya-{path_hash}"'
             
         return response
 

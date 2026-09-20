@@ -24,3 +24,16 @@ yarn-error.log*
 # OS Files
 .DS_Store
 Thumbs.db
+
+# Test & Coverage caches
+.pytest_cache/
+tests/.pytest_cache/
+.coverage
+htmlcov/
+tests/htmlcov/
+.vercel/
+
+# Uploaded storage
+backend/storage/*
+!backend/storage/.gitkeep
+

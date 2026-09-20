@@ -1,6 +1,7 @@
 import time
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from starlette.middleware.gzip import GZipMiddleware
 from app.core.config import settings
 from app.core.security import (
     SecurityHeadersMiddleware,
@@ -17,6 +18,9 @@ app = FastAPI(
     docs_url="/docs",
     redoc_url="/redoc"
 )
+
+# 0. GZip compression for high network efficiency
+app.add_middleware(GZipMiddleware, minimum_size=500)
 
 # 1. Performance timing & cache header middleware
 app.add_middleware(PerformanceTimingMiddleware)

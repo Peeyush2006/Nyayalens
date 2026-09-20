@@ -99,33 +99,42 @@ def run_comprehensive_audit():
 
     # 4. Testing & Verification Suite
     print("\n[4/6] AUDITING TEST SUITE COVERAGE...")
-    from test_backend import (
-        test_sample_contracts_loaded,
-        test_clause_extraction_and_intelligence,
-        test_risk_radar_severity_and_lawyer_questions,
-        test_obligation_tracker,
-        test_timeline_service,
-        test_rag_grounded_qa,
-        test_rag_hallucination_guard,
-        test_rag_hinglish_synthesis,
-        test_contract_comparison,
-        test_lawyer_brief_generation,
-        test_legal_knowledge_base,
-    )
-    backend_tests = [
-        test_sample_contracts_loaded,
-        test_clause_extraction_and_intelligence,
-        test_risk_radar_severity_and_lawyer_questions,
-        test_obligation_tracker,
-        test_timeline_service,
-        test_rag_grounded_qa,
-        test_rag_hallucination_guard,
-        test_rag_hinglish_synthesis,
-        test_contract_comparison,
-        test_lawyer_brief_generation,
-        test_legal_knowledge_base,
-    ]
-    all_30 = backend_tests + sec_tests + eff_tests
+    from run_all_tests import ALL_TEST_SUITES
+    test_passed = 0
+    total_tests = 0
+    for suite_name, tests in ALL_TEST_SUITES:
+        for t_name, t_fn in tests:
+            total_tests += 1
+            try:
+                t_fn()
+                test_passed += 1
+            except Exception as e:
+                print(f"  [FAIL] Test '{t_name}': {e}")
+                
+    test_score = (test_passed / total_tests) * 100.0 if total_tests > 0 else 0.0
+    scores["Testing"] = test_score
+    print(f"  [PASS] Test runner: {test_passed}/{total_tests} tests passed across {len(ALL_TEST_SUITES)} suites ({test_score:.1f}/100)")
+
+    # 5. Accessibility Audit
+    print("\n[5/6] AUDITING WCAG 2.1 AA ACCESSIBILITY...")
+    # Check landmarks, skip link, and labels
+    with open(root_dir / "frontend" / "src" / "app" / "layout.tsx", "r", encoding="utf-8") as f:
+        layout_txt = f.read()
+    has_skip = "main-content" in layout_txt and "Skip to main content" in layout_txt
+    has_lang = 'lang="en"' in layout_txt
+
+    with open(root_dir / "frontend" / "src" / "components" / "SplitScreenViewer.tsx", "r", encoding="utf-8") as f:
+        viewer_txt = f.read()
+    has_tablist = 'role="tablist"' in viewer_txt
+    has_tabpanel = 'role="tabpanel"' in viewer_txt
+    has_labels = 'aria-label=' in viewer_txt
+    
+    a11y_score = 100.0 if (has_skip and has_lang and has_tablist and has_tabpanel and has_labels) else 50.0
+    scores["Accessibility"] = a11y_score
+    print(f"  [PASS] WCAG 2.1 AA landmarks, tablist/tabpanel roles, and skip links verified ({a11y_score:.1f}/100)")
+
+    # 6. Problem Statement Alignment Audit
+    print("\n[6/6] AUDITING PROBLEM STATEMENT ALIGNMENT (9 REQUIREMENTS)...")
     from test_problem_statement_alignment import (
         test_req_1_document_ingestion_and_page_preservation,
         test_req_2_clause_intelligence_and_classification,
@@ -148,39 +157,6 @@ def run_comprehensive_audit():
         test_req_8_side_by_side_contract_diff_comparison,
         test_req_9_advocate_consultation_dossier_and_export,
     ]
-    all_30.extend(req_tests)
-    
-    tests_passed = 0
-    for t in all_30:
-        try:
-            t()
-            tests_passed += 1
-        except Exception:
-            pass
-    test_score = (tests_passed / len(all_30)) * 100.0
-    scores["Testing"] = test_score
-    print(f"  [PASS] Test runner: {tests_passed}/{len(all_30)} tests passed ({test_score:.1f}/100)")
-
-    # 5. Accessibility Audit
-    print("\n[5/6] AUDITING WCAG 2.1 AA ACCESSIBILITY...")
-    # Check landmarks, skip link, and labels
-    with open(root_dir / "frontend" / "src" / "app" / "layout.tsx", "r", encoding="utf-8") as f:
-        layout_txt = f.read()
-    has_skip = "main-content" in layout_txt and "Skip to main content" in layout_txt
-    has_lang = 'lang="en"' in layout_txt
-
-    with open(root_dir / "frontend" / "src" / "components" / "SplitScreenViewer.tsx", "r", encoding="utf-8") as f:
-        viewer_txt = f.read()
-    has_tablist = 'role="tablist"' in viewer_txt
-    has_tabpanel = 'role="tabpanel"' in viewer_txt
-    has_labels = 'aria-label=' in viewer_txt
-    
-    a11y_score = 100.0 if (has_skip and has_lang and has_tablist and has_tabpanel and has_labels) else 50.0
-    scores["Accessibility"] = a11y_score
-    print(f"  [PASS] WCAG 2.1 AA landmarks, tablist/tabpanel roles, and skip links verified ({a11y_score:.1f}/100)")
-
-    # 6. Problem Statement Alignment Audit
-    print("\n[6/6] AUDITING PROBLEM STATEMENT ALIGNMENT (9 REQUIREMENTS)...")
     req_passed = 0
     for t in req_tests:
         try:

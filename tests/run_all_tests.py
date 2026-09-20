@@ -49,6 +49,27 @@ from test_problem_statement_alignment import (
     test_req_8_side_by_side_contract_diff_comparison,
     test_req_9_advocate_consultation_dossier_and_export,
 )
+from test_api_routes import (
+    test_root_endpoint,
+    test_health_check_endpoint,
+    test_list_documents,
+    test_get_document_detail_success,
+    test_get_document_detail_not_found,
+    test_get_clauses,
+    test_get_risks,
+    test_get_obligations,
+    test_update_obligation_status,
+    test_ask_document_grounded_english,
+    test_ask_document_grounded_hinglish,
+    test_ask_document_hallucination_refusal,
+    test_compare_contracts,
+    test_generate_lawyer_brief,
+    test_export_lawyer_brief_markdown,
+    test_legal_info_search,
+    test_observability_endpoint,
+    test_problem_statement_alignment_endpoint,
+    test_document_upload_valid_text,
+)
 
 ALL_TEST_SUITES = [
     (
@@ -65,6 +86,30 @@ ALL_TEST_SUITES = [
             ("Contract Diff Comparison Engine", test_contract_comparison),
             ("10-Point Lawyer Consultation Brief", test_lawyer_brief_generation),
             ("India Law Codex Statutory Lookups", test_legal_knowledge_base),
+        ],
+    ),
+    (
+        "FastAPI REST Endpoints & Complete API Surface",
+        [
+            ("Root Status & Metadata", test_root_endpoint),
+            ("Health & Cache Telemetry", test_health_check_endpoint),
+            ("List Legal Documents", test_list_documents),
+            ("Document Detail Retrieval", test_get_document_detail_success),
+            ("Document 404 Exception Guard", test_get_document_detail_not_found),
+            ("Clause Extraction API", test_get_clauses),
+            ("Risk Radar API", test_get_risks),
+            ("Obligations Checklist API", test_get_obligations),
+            ("Obligation Status Update", test_update_obligation_status),
+            ("RAG Grounded Q&A (English)", test_ask_document_grounded_english),
+            ("RAG Grounded Q&A (Hinglish)", test_ask_document_grounded_hinglish),
+            ("RAG Zero-Hallucination Refusal", test_ask_document_hallucination_refusal),
+            ("Contract Comparison API", test_compare_contracts),
+            ("Lawyer Brief Generation API", test_generate_lawyer_brief),
+            ("Lawyer Brief Markdown Export", test_export_lawyer_brief_markdown),
+            ("India Law Search API", test_legal_info_search),
+            ("Observability Telemetry API", test_observability_endpoint),
+            ("Problem Statement Alignment Endpoint", test_problem_statement_alignment_endpoint),
+            ("Secure Document Upload API", test_document_upload_valid_text),
         ],
     ),
     (
