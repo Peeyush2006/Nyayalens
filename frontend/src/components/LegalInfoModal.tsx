@@ -68,10 +68,10 @@ export default function LegalInfoModal({ onClose }: LegalInfoModalProps) {
             <Search className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" aria-hidden="true" />
             <input
               type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
               aria-label="Search legal doctrines and statutes"
               placeholder="Search legal doctrines (e.g., 'Indemnity', 'Non-compete Section 27', 'Force Majeure')..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full text-xs pl-9 pr-4 py-2 bg-white rounded-xl border border-slate-300 focus:outline-hidden focus:border-indigo-500 text-slate-800"
             />
           </form>

@@ -815,6 +815,7 @@ export default function SplitScreenViewer({
                 >
                   <input
                     type="text"
+                    aria-label="Ask questions about this legal document"
                     value={chatInput}
                     onChange={(e) => setChatInput(e.target.value)}
                     placeholder={
@@ -822,7 +823,6 @@ export default function SplitScreenViewer({
                         ? "Puchhiye: 'Notice period kitna hai?'"
                         : "Ask about rights, termination, payment deadlines, liabilities..."
                     }
-                    aria-label="Ask questions about this legal document"
                     className="flex-1 text-xs px-4 py-3 rounded-xl border border-slate-200 focus:outline-hidden focus:border-indigo-500 text-slate-800 shadow-2xs font-medium"
                   />
                   <button
