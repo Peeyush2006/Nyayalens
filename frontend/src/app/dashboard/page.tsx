@@ -245,9 +245,21 @@ export default function DashboardPage() {
         </div>
 
         {uploadError && (
-          <div className="bg-rose-50 border border-rose-200 text-rose-800 text-xs p-4 rounded-xl flex items-center space-x-2">
-            <AlertTriangle className="w-4 h-4 text-rose-600 flex-shrink-0" />
-            <span>{uploadError}</span>
+          <div className="bg-rose-50 border border-rose-200 text-rose-800 text-xs sm:text-sm p-4 rounded-xl flex items-start justify-between shadow-xs">
+            <div className="flex items-start space-x-3">
+              <AlertTriangle className="w-4 h-4 text-rose-600 flex-shrink-0 mt-0.5" />
+              <div>
+                <span className="font-semibold">Upload Notice: </span>
+                <span>{uploadError}</span>
+              </div>
+            </div>
+            <button
+              type="button"
+              onClick={() => setUploadError("")}
+              className="text-rose-600 hover:text-rose-900 text-xs font-semibold ml-4 underline flex-shrink-0 cursor-pointer"
+            >
+              Dismiss
+            </button>
           </div>
         )}
 

@@ -56,7 +56,13 @@ async def upload_document(file: UploadFile = File(...)):
     with open(save_path, "wb") as buffer:
         buffer.write(file_bytes)
         
-    doc = document_manager.process_uploaded_file(clean_name, save_path)
+    try:
+        doc = document_manager.process_uploaded_file(clean_name, save_path)
+    except Exception as exc:
+        raise HTTPException(
+            status_code=422,
+            detail=f"Unable to parse document contents: {str(exc)}"
+        )
     
     # Invalidate cache for new documents
     cache.invalidate("doc_")

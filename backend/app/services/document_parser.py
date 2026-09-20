@@ -55,27 +55,40 @@ class DocumentParser:
             
             doc.close()
             return pages_content, page_count, "\n\n".join(full_text_list)
-        except Exception as e:
+        except Exception:
             # Fallback to pdfplumber
-            pages_content = []
-            with pdfplumber.open(str(file_path)) as pdf:
-                page_count = len(pdf.pages)
-                for i, page in enumerate(pdf.pages):
-                    t = page.extract_text() or ""
-                    sections = DocumentParser._detect_sections(t)
-                    pages_content.append(DocumentPageContent(
-                        page_number=i + 1,
-                        text=t.strip(),
-                        sections=sections
-                    ))
-                    full_text_list.append(t.strip())
-            return pages_content, page_count, "\n\n".join(full_text_list)
+            try:
+                pages_content = []
+                with pdfplumber.open(str(file_path)) as pdf:
+                    page_count = len(pdf.pages)
+                    for i, page in enumerate(pdf.pages):
+                        t = page.extract_text() or ""
+                        sections = DocumentParser._detect_sections(t)
+                        pages_content.append(DocumentPageContent(
+                            page_number=i + 1,
+                            text=t.strip(),
+                            sections=sections
+                        ))
+                        full_text_list.append(t.strip())
+                return pages_content, page_count, "\n\n".join(full_text_list)
+            except Exception:
+                # Ultimate fallback for any unparseable PDF
+                raw_snippet = f"Document: {file_path.name}\n(Preview could not extract text from this format; please ensure it is not password-protected or image-only)."
+                return [DocumentPageContent(page_number=1, text=raw_snippet, sections=[])], 1, raw_snippet
 
     @staticmethod
     def _parse_docx(file_path: Path) -> Tuple[List[DocumentPageContent], int, str]:
-        doc = DocxDocument(str(file_path))
-        full_paragraphs = [p.text for p in doc.paragraphs if p.text.strip()]
-        full_text = "\n\n".join(full_paragraphs)
+        full_text = ""
+        try:
+            doc = DocxDocument(str(file_path))
+            full_paragraphs = [p.text for p in doc.paragraphs if p.text.strip()]
+            full_text = "\n\n".join(full_paragraphs)
+        except Exception:
+            try:
+                with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
+                    full_text = f.read()
+            except Exception:
+                full_text = f"Document: {file_path.name}"
         
         # Simulate pages (~500 words per page)
         words = full_text.split()

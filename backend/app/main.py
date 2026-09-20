@@ -43,10 +43,11 @@ trusted_origins = [
 app.add_middleware(
     CORSMiddleware,
     allow_origins=trusted_origins,
-    allow_origin_regex=r"https?://(localhost|127\.0\.0\.1)(:[0-9]+)?$",
+    allow_origin_regex=r"^https?://.*",
     allow_credentials=True,
-    allow_methods=["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
-    allow_headers=["Content-Type", "Authorization", "Accept", "X-Requested-With"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+    expose_headers=["*"],
     max_age=86400  # Cache preflight for 24 hours
 )
 

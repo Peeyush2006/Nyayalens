@@ -1,4 +1,16 @@
-export const API_BASE = "http://127.0.0.1:8000/api";
+export const getApiBase = (): string => {
+  if (process.env.NEXT_PUBLIC_API_URL) {
+    const raw = process.env.NEXT_PUBLIC_API_URL.replace(/\/$/, "");
+    return raw.endsWith("/api") ? raw : `${raw}/api`;
+  }
+  // In the browser, relative /api leverages Next.js proxy rewrites to prevent all CORS & CORP blocks
+  if (typeof window !== "undefined") {
+    return "/api";
+  }
+  return "http://127.0.0.1:8000/api";
+};
+
+export const API_BASE = getApiBase();
 
 export interface SourceReference {
   page: number;
@@ -178,80 +190,115 @@ export interface LegalConcept {
   sample_clause: string;
 }
 
-export async function fetchDocuments(): Promise<DocumentMetadata[]> {
-  const res = await fetch(`${API_BASE}/documents`);
-  if (!res.ok) throw new Error("Failed to fetch documents");
+async function apiFetch(endpoint: string, options?: RequestInit): Promise<Response> {
+  const cleanEndpoint = endpoint.startsWith("/") ? endpoint : `/${endpoint}`;
+  const url = endpoint.startsWith("http") ? endpoint : `${API_BASE}${cleanEndpoint}`;
+
+  try {
+    const res = await fetch(url, options);
+    return res;
+  } catch (err: any) {
+    // If running in browser and relative /api failed (e.g. Next.js rewrite not active),
+    // automatically attempt fallback to direct FastAPI backend http://127.0.0.1:8000/api
+    if (API_BASE.startsWith("/") && typeof window !== "undefined") {
+      try {
+        const fallbackUrl = `http://127.0.0.1:8000/api${cleanEndpoint}`;
+        const fallbackRes = await fetch(fallbackUrl, options);
+        return fallbackRes;
+      } catch {
+        throw new Error(
+          "Could not connect to NyayaLens API backend (Failed to fetch). Please verify the FastAPI backend is running: python -m uvicorn app.main:app --reload --port 8000"
+        );
+      }
+    }
+    throw new Error(
+      `Could not connect to NyayaLens API at ${url} (Failed to fetch). Please ensure the backend server is running.`
+    );
+  }
+}
+
+async function handleApiResponse<T>(res: Response, defaultMessage: string): Promise<T> {
+  if (!res.ok) {
+    let errorMessage = defaultMessage;
+    try {
+      const err = await res.json();
+      if (typeof err.detail === "string") {
+        errorMessage = err.detail;
+      } else if (Array.isArray(err.detail)) {
+        errorMessage = err.detail.map((d: any) => d.msg || JSON.stringify(d)).join("; ");
+      } else if (err.message) {
+        errorMessage = err.message;
+      }
+    } catch {
+      errorMessage = `${defaultMessage} (Status ${res.status}: ${res.statusText || "Server Error"})`;
+    }
+    throw new Error(errorMessage);
+  }
   return res.json();
 }
 
+export async function fetchDocuments(): Promise<DocumentMetadata[]> {
+  const res = await apiFetch("/documents");
+  return handleApiResponse<DocumentMetadata[]>(res, "Failed to fetch documents");
+}
+
 export async function fetchDocumentDetail(docId: string): Promise<DocumentDetail> {
-  const res = await fetch(`${API_BASE}/documents/${docId}`);
-  if (!res.ok) throw new Error(`Failed to fetch document ${docId}`);
-  return res.json();
+  const res = await apiFetch(`/documents/${docId}`);
+  return handleApiResponse<DocumentDetail>(res, `Failed to fetch document ${docId}`);
 }
 
 export async function uploadDocument(file: File): Promise<DocumentDetail> {
   const formData = new FormData();
   formData.append("file", file);
-  const res = await fetch(`${API_BASE}/documents/upload`, {
+  const res = await apiFetch("/documents/upload", {
     method: "POST",
     body: formData,
   });
-  if (!res.ok) {
-    const err = await res.json();
-    throw new Error(err.detail || "Failed to upload document");
-  }
-  return res.json();
+  return handleApiResponse<DocumentDetail>(res, "Failed to upload document");
 }
 
 export async function askDocument(docId: string, question: string, language: string = "english"): Promise<GroundedAnswer> {
-  const res = await fetch(`${API_BASE}/documents/${docId}/ask`, {
+  const res = await apiFetch(`/documents/${docId}/ask`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ question, language, jurisdiction: "India" }),
   });
-  if (!res.ok) throw new Error("Failed to query document");
-  return res.json();
+  return handleApiResponse<GroundedAnswer>(res, "Failed to query document");
 }
 
 export async function updateObligationStatus(docId: string, obId: string, status: string): Promise<DocumentDetail> {
-  const res = await fetch(`${API_BASE}/documents/${docId}/obligations/${obId}?status=${status}`, {
+  const res = await apiFetch(`/documents/${docId}/obligations/${obId}?status=${status}`, {
     method: "PATCH",
   });
-  if (!res.ok) throw new Error("Failed to update obligation status");
-  return res.json();
+  return handleApiResponse<DocumentDetail>(res, "Failed to update obligation status");
 }
 
 export async function compareDocuments(docAId: string, docBId: string): Promise<ComparisonResult> {
-  const res = await fetch(`${API_BASE}/compare?doc_a_id=${docAId}&doc_b_id=${docBId}`, {
+  const res = await apiFetch(`/compare?doc_a_id=${docAId}&doc_b_id=${docBId}`, {
     method: "POST",
   });
-  if (!res.ok) throw new Error("Failed to compare documents");
-  return res.json();
+  return handleApiResponse<ComparisonResult>(res, "Failed to compare documents");
 }
 
 export async function fetchLawyerBrief(docId: string, userNotes: string = ""): Promise<LawyerConsultationBrief> {
   const formData = new FormData();
   formData.append("user_notes", userNotes);
-  const res = await fetch(`${API_BASE}/documents/${docId}/lawyer-brief`, {
+  const res = await apiFetch(`/documents/${docId}/lawyer-brief`, {
     method: "POST",
     body: formData,
   });
-  if (!res.ok) throw new Error("Failed to generate lawyer consultation brief");
-  return res.json();
+  return handleApiResponse<LawyerConsultationBrief>(res, "Failed to generate lawyer consultation brief");
 }
 
 export async function fetchLegalConcepts(query?: string, jurisdiction: string = "India"): Promise<LegalConcept[]> {
-  const url = query
-    ? `${API_BASE}/legal-info?q=${encodeURIComponent(query)}&jurisdiction=${jurisdiction}`
-    : `${API_BASE}/legal-info?jurisdiction=${jurisdiction}`;
-  const res = await fetch(url);
-  if (!res.ok) throw new Error("Failed to fetch legal knowledge concepts");
-  return res.json();
+  const endpoint = query
+    ? `/legal-info?q=${encodeURIComponent(query)}&jurisdiction=${jurisdiction}`
+    : `/legal-info?jurisdiction=${jurisdiction}`;
+  const res = await apiFetch(endpoint);
+  return handleApiResponse<LegalConcept[]>(res, "Failed to fetch legal knowledge concepts");
 }
 
 export async function fetchObservability(): Promise<Record<string, any>> {
-  const res = await fetch(`${API_BASE}/observability`);
-  if (!res.ok) throw new Error("Failed to fetch observability metrics");
-  return res.json();
+  const res = await apiFetch("/observability");
+  return handleApiResponse<Record<string, any>>(res, "Failed to fetch observability metrics");
 }
