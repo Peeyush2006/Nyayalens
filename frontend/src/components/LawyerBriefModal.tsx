@@ -76,41 +76,49 @@ export default function LawyerBriefModal({ documentId, onClose }: LawyerBriefMod
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="lawyer-brief-title"
+      className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4"
+    >
       <div className="bg-white rounded-2xl shadow-2xl border border-slate-200 w-full max-w-4xl h-[90vh] flex flex-col overflow-hidden">
         {/* Header */}
         <div className="bg-slate-900 text-white px-6 py-4 flex items-center justify-between flex-shrink-0 no-print">
           <div className="flex items-center space-x-3">
             <div className="w-9 h-9 rounded-lg bg-indigo-500/30 flex items-center justify-center text-amber-300">
-              <Briefcase className="w-5 h-5" />
+              <Briefcase className="w-5 h-5" aria-hidden="true" />
             </div>
             <div>
-              <h2 className="text-base font-bold">Prepare for Legal Consultation</h2>
+              <h2 id="lawyer-brief-title" className="text-base font-bold">Prepare for Legal Consultation</h2>
               <p className="text-xs text-slate-300">Comprehensive structured briefing dossier for advocates</p>
             </div>
           </div>
           <div className="flex items-center space-x-2">
             <button
               onClick={handlePrint}
+              aria-label="Print dossier to PDF"
               className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium transition-colors"
               title="Print to PDF"
             >
-              <Printer className="w-3.5 h-3.5" />
+              <Printer className="w-3.5 h-3.5" aria-hidden="true" />
               <span>Print / PDF</span>
             </button>
             <button
               onClick={downloadMarkdown}
+              aria-label="Export briefing dossier as Markdown"
               className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-medium transition-colors shadow-xs"
               title="Download Markdown"
             >
-              <Download className="w-3.5 h-3.5" />
+              <Download className="w-3.5 h-3.5" aria-hidden="true" />
               <span>Export .MD</span>
             </button>
             <button
               onClick={onClose}
+              aria-label="Close lawyer brief modal"
               className="p-1.5 rounded-lg hover:bg-slate-800 text-slate-400 hover:text-white transition-colors ml-2"
             >
-              <X className="w-5 h-5" />
+              <X className="w-5 h-5" aria-hidden="true" />
             </button>
           </div>
         </div>

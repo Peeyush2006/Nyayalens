@@ -138,21 +138,23 @@ export default function DashboardPage() {
           onOpenObservability={() => setShowObservability(true)}
           onOpenLegalInfo={() => setShowLegalInfo(true)}
         />
-        <SplitScreenViewer
-          document={selectedDoc}
-          onBack={() => {
-            setSelectedDoc(null);
-            refreshDocuments();
-          }}
-          onCompare={(docId) => {
-            setComparisonTargetId(docId);
-            setShowComparison(true);
-          }}
-          onLawyerBrief={(docId) => {
-            setLawyerBriefDocId(docId);
-            setShowLawyerBrief(true);
-          }}
-        />
+        <main id="main-content" role="main" tabIndex={-1} className="flex-1 focus:outline-hidden">
+          <SplitScreenViewer
+            document={selectedDoc}
+            onBack={() => {
+              setSelectedDoc(null);
+              refreshDocuments();
+            }}
+            onCompare={(docId) => {
+              setComparisonTargetId(docId);
+              setShowComparison(true);
+            }}
+            onLawyerBrief={(docId) => {
+              setLawyerBriefDocId(docId);
+              setShowLawyerBrief(true);
+            }}
+          />
+        </main>
 
         {showComparison && (
           <ContractComparisonModal
@@ -183,7 +185,7 @@ export default function DashboardPage() {
         onOpenLegalInfo={() => setShowLegalInfo(true)}
       />
 
-      <div className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+      <main id="main-content" role="main" tabIndex={-1} className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 focus:outline-hidden">
         {/* Workspace Banner */}
         <div className="rounded-xl bg-slate-900 p-7 sm:p-8 text-white border border-slate-800 shadow-sm">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
@@ -202,6 +204,7 @@ export default function DashboardPage() {
                 ref={fileInputRef}
                 onChange={handleFileUpload}
                 accept=".pdf,.docx,.doc,.txt,.md"
+                aria-label="Upload legal contract file"
                 className="hidden"
               />
               <button
@@ -325,10 +328,11 @@ export default function DashboardPage() {
             <div className="flex items-center space-x-2">
               {/* Search Bar */}
               <div className="relative">
-                <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-2.5" />
+                <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-2.5" aria-hidden="true" />
                 <input
                   type="text"
                   placeholder="Search contract name, party..."
+                  aria-label="Search contracts by name or party"
                   value={searchFilter}
                   onChange={(e) => setSearchFilter(e.target.value)}
                   className="text-xs pl-8 pr-3 py-1.5 bg-white border border-slate-200 rounded-xl focus:outline-hidden focus:border-indigo-500 text-slate-800 w-48 sm:w-64"
@@ -339,6 +343,7 @@ export default function DashboardPage() {
               <select
                 value={typeFilter}
                 onChange={(e) => setTypeFilter(e.target.value)}
+                aria-label="Filter documents by contract type"
                 className="text-xs bg-white border border-slate-200 rounded-xl px-3 py-1.5 text-slate-700 focus:outline-hidden focus:border-indigo-500"
               >
                 <option value="All">All Types</option>
@@ -422,7 +427,7 @@ export default function DashboardPage() {
             </div>
           )}
         </div>
-      </div>
+      </main>
 
       {showComparison && (
         <ContractComparisonModal

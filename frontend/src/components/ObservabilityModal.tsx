@@ -19,24 +19,30 @@ export default function ObservabilityModal({ onClose }: ObservabilityModalProps)
   }, []);
 
   return (
-    <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="observability-modal-title"
+      className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4"
+    >
       <div className="bg-white rounded-2xl shadow-2xl border border-slate-200 w-full max-w-2xl overflow-hidden flex flex-col">
         {/* Header */}
         <div className="bg-slate-900 text-white px-6 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <div className="w-9 h-9 rounded-lg bg-emerald-500/30 flex items-center justify-center text-emerald-400">
-              <Activity className="w-5 h-5" />
+              <Activity className="w-5 h-5" aria-hidden="true" />
             </div>
             <div>
-              <h2 className="text-base font-bold">System Observability & Trust Metrics</h2>
+              <h2 id="observability-modal-title" className="text-base font-bold">System Observability & Trust Metrics</h2>
               <p className="text-xs text-slate-300">Live AI evaluation and citation grounding verification</p>
             </div>
           </div>
           <button
             onClick={onClose}
+            aria-label="Close observability metrics modal"
             className="p-1.5 rounded-lg hover:bg-slate-800 text-slate-400 hover:text-white transition-colors"
           >
-            <X className="w-5 h-5" />
+            <X className="w-5 h-5" aria-hidden="true" />
           </button>
         </div>
 

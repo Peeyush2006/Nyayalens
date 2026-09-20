@@ -134,8 +134,9 @@ export default function SplitScreenViewer({
             onClick={onBack}
             className="p-1.5 rounded-xl hover:bg-slate-100 text-slate-500 hover:text-slate-800 transition-colors border border-slate-200/80"
             title="Back to Dashboard"
+            aria-label="Back to Dashboard"
           >
-            <ArrowLeft className="w-4 h-4" />
+            <ArrowLeft className="w-4 h-4" aria-hidden="true" />
           </button>
           <div>
             <div className="flex items-center space-x-2">
@@ -156,15 +157,17 @@ export default function SplitScreenViewer({
           <button
             onClick={() => onCompare(doc.id)}
             className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-xl border border-slate-200 bg-white text-slate-700 text-xs font-semibold hover:bg-slate-50 hover:border-slate-300 transition-all shadow-2xs"
+            aria-label="Compare Contract with other documents"
           >
-            <FileDiff className="w-3.5 h-3.5 text-indigo-600" />
+            <FileDiff className="w-3.5 h-3.5 text-indigo-600" aria-hidden="true" />
             <span className="hidden sm:inline">Compare Contract</span>
           </button>
           <button
             onClick={() => onLawyerBrief(doc.id)}
             className="inline-flex items-center space-x-1.5 px-3.5 py-1.5 rounded-xl bg-slate-950 hover:bg-slate-900 text-white text-xs font-semibold transition-all shadow-xs"
+            aria-label="Prepare structured lawyer brief"
           >
-            <Briefcase className="w-3.5 h-3.5 text-amber-300" />
+            <Briefcase className="w-3.5 h-3.5 text-amber-300" aria-hidden="true" />
             <span>Prepare Lawyer Brief</span>
           </button>
         </div>
@@ -173,30 +176,33 @@ export default function SplitScreenViewer({
       {/* Main Split Screen Area */}
       <div className="flex-1 flex overflow-hidden">
         {/* LEFT PANEL: Original Document Viewer */}
-        <div className="w-1/2 flex flex-col border-r border-slate-200/80 bg-[#F1F5F9]">
+        <section aria-label="Original Document Viewer" className="w-1/2 flex flex-col border-r border-slate-200/80 bg-[#F1F5F9]">
           {/* Document Viewer Toolbar */}
           <div className="bg-white border-b border-slate-200 px-4 py-2 flex items-center justify-between text-xs text-slate-700 flex-shrink-0">
             <div className="flex items-center space-x-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span className="w-2 h-2 rounded-full bg-emerald-500" aria-hidden="true" />
               <span className="font-bold text-[11px] uppercase tracking-wider text-slate-600">Original Contract</span>
-              <span className="text-slate-300">|</span>
+              <span className="text-slate-300" aria-hidden="true">|</span>
               <span className="text-slate-500 font-mono">Page {currentPage} of {doc.page_count}</span>
             </div>
 
             {/* Page navigation buttons */}
-            <div className="flex items-center space-x-1.5">
+            <div className="flex items-center space-x-1.5" role="navigation" aria-label="Pagination">
               <button
                 disabled={currentPage <= 1}
                 onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+                aria-label="Previous Page"
                 className="p-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 disabled:opacity-30 border border-slate-200 text-slate-700 transition-colors"
               >
-                <ArrowLeft className="w-3.5 h-3.5" />
+                <ArrowLeft className="w-3.5 h-3.5" aria-hidden="true" />
               </button>
               <div className="flex space-x-1">
                 {Array.from({ length: Math.min(doc.page_count, 8) }).map((_, idx) => (
                   <button
                     key={idx + 1}
                     onClick={() => setCurrentPage(idx + 1)}
+                    aria-label={`Go to page ${idx + 1}`}
+                    aria-current={currentPage === idx + 1 ? "page" : undefined}
                     className={`w-6 h-6 rounded-lg text-xs font-bold transition-colors ${
                       currentPage === idx + 1
                         ? "bg-slate-950 text-white shadow-xs"
@@ -210,25 +216,27 @@ export default function SplitScreenViewer({
               <button
                 disabled={currentPage >= doc.page_count}
                 onClick={() => setCurrentPage((p) => Math.min(doc.page_count, p + 1))}
+                aria-label="Next Page"
                 className="p-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 disabled:opacity-30 border border-slate-200 text-slate-700 transition-colors"
               >
-                <ArrowRight className="w-3.5 h-3.5" />
+                <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
               </button>
             </div>
           </div>
 
           {/* Search bar inside Document */}
           <div className="px-4 py-2 bg-slate-50/90 border-b border-slate-200 flex items-center space-x-2 flex-shrink-0">
-            <Search className="w-3.5 h-3.5 text-slate-400" />
+            <Search className="w-3.5 h-3.5 text-slate-400" aria-hidden="true" />
             <input
               type="text"
               placeholder="Search words in contract..."
+              aria-label="Search words in contract"
               value={docSearch}
               onChange={(e) => setDocSearch(e.target.value)}
               className="w-full text-xs bg-transparent border-none outline-hidden focus:ring-0 text-slate-800 placeholder-slate-400 font-medium"
             />
             {docSearch && (
-              <button onClick={() => setDocSearch("")} className="text-xs text-slate-400 hover:text-slate-600">
+              <button onClick={() => setDocSearch("")} aria-label="Clear search" className="text-xs text-slate-400 hover:text-slate-600">
                 Clear
               </button>
             )}
@@ -264,12 +272,12 @@ export default function SplitScreenViewer({
               })}
             </div>
           </div>
-        </div>
+        </section>
 
         {/* RIGHT PANEL: AI Document Intelligence Suite */}
-        <div className="w-1/2 flex flex-col bg-white">
+        <section aria-label="AI Document Intelligence Suite" className="w-1/2 flex flex-col bg-white">
           {/* Document Intelligence Tabs */}
-          <div className="flex border-b border-slate-200 bg-slate-50 px-3 pt-2 flex-shrink-0 overflow-x-auto gap-1">
+          <div className="flex border-b border-slate-200 bg-slate-50 px-3 pt-2 flex-shrink-0 overflow-x-auto gap-1" role="tablist" aria-label="Document Intelligence Navigation">
             {[
               { id: "summary", label: "Summary", icon: AlignLeft, color: "text-slate-600" },
               { id: "clauses", label: `Clauses (${doc.clauses.length})`, icon: FileText, color: "text-slate-600" },
@@ -283,6 +291,11 @@ export default function SplitScreenViewer({
               return (
                 <button
                   key={tab.id}
+                  id={`tab-${tab.id}`}
+                  role="tab"
+                  aria-selected={activeTab === tab.id}
+                  aria-controls={`panel-${tab.id}`}
+                  tabIndex={activeTab === tab.id ? 0 : -1}
                   onClick={() => setActiveTab(tab.id as any)}
                   className={`flex items-center space-x-1.5 px-3 py-2 text-xs font-semibold rounded-t-lg transition-colors whitespace-nowrap ${
                     activeTab === tab.id
@@ -290,7 +303,7 @@ export default function SplitScreenViewer({
                       : "text-slate-500 hover:text-slate-800 hover:bg-slate-100"
                   }`}
                 >
-                  <Icon className={`w-3.5 h-3.5 ${tab.color}`} />
+                  <Icon className={`w-3.5 h-3.5 ${tab.color}`} aria-hidden="true" />
                   <span>{tab.label}</span>
                 </button>
               );
@@ -299,7 +312,7 @@ export default function SplitScreenViewer({
 
           {/* Tab 1: Summary */}
           {activeTab === "summary" && (
-            <div className="flex-1 p-6 overflow-y-auto space-y-6">
+            <div id="panel-summary" role="tabpanel" aria-labelledby="tab-summary" className="flex-1 p-6 overflow-y-auto space-y-6">
               {/* Language Switcher for Summary */}
               <div className="flex items-center justify-between bg-gradient-to-r from-indigo-50/80 to-purple-50/50 border border-indigo-100/80 p-3 rounded-2xl">
                 <div className="flex items-center space-x-2 text-xs font-semibold text-indigo-950">
@@ -405,7 +418,7 @@ export default function SplitScreenViewer({
 
           {/* Tab 2: Clause Intelligence */}
           {activeTab === "clauses" && (
-            <div className="flex-1 flex flex-col overflow-hidden">
+            <div id="panel-clauses" role="tabpanel" aria-labelledby="tab-clauses" className="flex-1 flex flex-col overflow-hidden">
               {/* Filter Pills */}
               <div className="p-3 border-b border-slate-200 bg-slate-50/90 flex items-center space-x-2 overflow-x-auto flex-shrink-0">
                 <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Filter:</span>
@@ -504,7 +517,7 @@ export default function SplitScreenViewer({
 
           {/* Tab 3: Risk Radar */}
           {activeTab === "risks" && (
-            <div className="flex-1 p-5 overflow-y-auto space-y-4">
+            <div id="panel-risks" role="tabpanel" aria-labelledby="tab-risks" className="flex-1 p-5 overflow-y-auto space-y-4">
               <div className="bg-slate-100 p-3.5 rounded-xl border border-slate-200 text-xs text-slate-700 flex items-center justify-between">
                 <div className="flex items-center space-x-2">
                   <Info className="w-4 h-4 text-slate-500 flex-shrink-0" />
@@ -575,29 +588,58 @@ export default function SplitScreenViewer({
                         handleSendMessage(risk.suggested_lawyer_question);
                       }}
                       className="ml-3 px-3 py-1.5 rounded-lg bg-slate-950 text-white text-xs font-semibold hover:bg-slate-900 transition-colors whitespace-nowrap shadow-2xs"
-                    >
-                      Ask in Chat
-                    </button>
-                  </div>
+              {doc.risks.map((risk) => {
+                const colors = getRiskColor(risk.severity);
+                return (
+                  <div
+                    key={risk.id}
+                    className="bg-white rounded-2xl border border-slate-200/80 p-5 shadow-xs hover:border-slate-300 transition-all space-y-3"
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold border uppercase tracking-wide flex items-center space-x-1 ${colors.badge}`}>
+                        <AlertTriangle className="w-3 h-3 mr-1 inline" aria-hidden="true" />
+                        {risk.severity} Risk: {risk.category}
+                      </span>
+                      <span className="text-xs text-slate-400 font-mono">Impact Score: {risk.score}/10</span>
+                    </div>
 
-                  <div className="flex items-center justify-between text-xs text-slate-400 pt-1">
-                    <span>Source: Page {risk.page_number}</span>
-                    <button
-                      onClick={() => jumpToPage(risk.page_number, risk.source_text)}
-                      className="text-indigo-600 hover:underline font-semibold inline-flex items-center space-x-1"
-                    >
-                      <span>Highlight Source Clause</span>
-                      <ChevronRight className="w-3.5 h-3.5" />
-                    </button>
+                    <div>
+                      <h4 className="text-xs font-bold text-slate-900">{risk.title}</h4>
+                      <p className="text-xs text-slate-700 mt-1 leading-relaxed">{risk.description}</p>
+                    </div>
+
+                    <div className="bg-slate-50 border border-slate-200/80 p-3 rounded-xl text-xs space-y-1">
+                      <span className="font-bold text-slate-900">Why this matters:</span>
+                      <p className="text-slate-600 leading-relaxed">{risk.legal_impact}</p>
+                    </div>
+
+                    {risk.recommended_negotiation && (
+                      <div className="bg-indigo-50/60 border border-indigo-100 p-3 rounded-xl text-xs space-y-1">
+                        <span className="font-bold text-indigo-950">Recommended Counter-Proposal:</span>
+                        <p className="text-indigo-900 leading-relaxed">{risk.recommended_negotiation}</p>
+                      </div>
+                    )}
+
+                    <div className="flex items-center justify-between text-xs text-slate-400 pt-1">
+                      <span>Source: Page {risk.page_number}</span>
+                      <button
+                        onClick={() => jumpToPage(risk.page_number, risk.source_text)}
+                        aria-label={`Highlight source clause on page ${risk.page_number}`}
+                        className="text-indigo-600 hover:underline font-semibold inline-flex items-center space-x-1"
+                      >
+                        <span>Highlight Source Clause</span>
+                        <ChevronRight className="w-3.5 h-3.5" aria-hidden="true" />
+                      </button>
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           )}
 
           {/* Tab 4: Obligations Tracker */}
           {activeTab === "obligations" && (
-            <div className="flex-1 p-5 overflow-y-auto space-y-4">
+            <div id="panel-obligations" role="tabpanel" aria-labelledby="tab-obligations" className="flex-1 p-5 overflow-y-auto space-y-4">
               <div className="flex items-center justify-between pb-2 border-b border-slate-200">
                 <span className="text-xs text-slate-500 font-medium">
                   {doc.obligations.filter((o) => o.status === "Completed").length} of {doc.obligations.length} obligations completed
@@ -617,10 +659,11 @@ export default function SplitScreenViewer({
                   <div className="flex items-start space-x-3.5">
                     <button
                       onClick={() => toggleObligation(item.id, item.status)}
+                      aria-label={`Mark obligation "${item.task}" as ${item.status === "Completed" ? "pending" : "completed"}`}
                       className="mt-0.5 text-slate-400 hover:text-emerald-600 transition-colors flex-shrink-0"
                     >
                       {item.status === "Completed" ? (
-                        <CheckCircle2 className="w-5 h-5 text-emerald-600" />
+                        <CheckCircle2 className="w-5 h-5 text-emerald-600" aria-hidden="true" />
                       ) : (
                         <div className="w-5 h-5 rounded-md border-2 border-slate-300 hover:border-indigo-500 transition-colors" />
                       )}
@@ -637,7 +680,7 @@ export default function SplitScreenViewer({
                       </div>
 
                       <div className="text-slate-500 flex items-center space-x-2 pt-0.5">
-                        <Clock className="w-3.5 h-3.5 text-slate-400" />
+                        <Clock className="w-3.5 h-3.5 text-slate-400" aria-hidden="true" />
                         <span>Deadline: <strong className="text-slate-800">{item.deadline}</strong></span>
                       </div>
 
@@ -650,6 +693,7 @@ export default function SplitScreenViewer({
                       <div className="flex justify-end pt-1">
                         <button
                           onClick={() => jumpToPage(item.page_number)}
+                          aria-label={`View obligation on page ${item.page_number}`}
                           className="text-[11px] text-indigo-600 hover:underline font-semibold"
                         >
                           View on Page {item.page_number}
@@ -664,7 +708,7 @@ export default function SplitScreenViewer({
 
           {/* Tab 5: Timeline */}
           {activeTab === "timeline" && (
-            <div className="flex-1 p-6 overflow-y-auto">
+            <div id="panel-timeline" role="tabpanel" aria-labelledby="tab-timeline" className="flex-1 p-6 overflow-y-auto">
               <div className="relative border-l-2 border-indigo-200/80 ml-4 pl-6 space-y-8">
                 {doc.timeline.map((event) => (
                   <div key={event.id} className="relative group">
@@ -693,7 +737,7 @@ export default function SplitScreenViewer({
 
           {/* Tab 6: Ask Document (Evidence-Grounded RAG Chat) */}
           {activeTab === "chat" && (
-            <div className="flex-1 flex flex-col overflow-hidden">
+            <div id="panel-chat" role="tabpanel" aria-labelledby="tab-chat" className="flex-1 flex flex-col overflow-hidden">
               {/* Language Selector Bar */}
               <div className="px-4 py-2.5 border-b border-slate-200 bg-slate-50/80 flex items-center justify-between text-xs text-slate-600 flex-shrink-0">
                 <span className="font-bold text-slate-500 text-[11px] uppercase tracking-wider">Language Model:</span>
@@ -739,7 +783,7 @@ export default function SplitScreenViewer({
                       {msg.citations && msg.citations.length > 0 && (
                         <div className="mt-3.5 pt-3 border-t border-slate-200/80 space-y-2">
                           <div className="text-[10px] font-bold uppercase tracking-wider text-indigo-900 flex items-center space-x-1.5">
-                            <Scale className="w-3.5 h-3.5 text-indigo-600" />
+                            <Scale className="w-3.5 h-3.5 text-indigo-600" aria-hidden="true" />
                             <span>Verified Contractual Evidence ({msg.citations.length})</span>
                           </div>
                           {msg.citations.map((cit, cIdx) => (
@@ -751,7 +795,7 @@ export default function SplitScreenViewer({
                               <div className="flex items-center justify-between text-[11px] text-indigo-950 font-bold mb-1">
                                 <span>Page {cit.page} {cit.section ? `• ${cit.section}` : ""}</span>
                                 <span className="group-hover:underline text-[10px] text-indigo-600 flex items-center font-medium">
-                                  Highlight in Viewer <ExternalLink className="w-2.5 h-2.5 ml-1" />
+                                  Highlight in Viewer <ExternalLink className="w-2.5 h-2.5 ml-1" aria-hidden="true" />
                                 </span>
                               </div>
                               <p className="text-[11px] text-slate-700 italic font-serif line-clamp-2">
@@ -782,7 +826,7 @@ export default function SplitScreenViewer({
 
                 {chatLoading && (
                   <div className="flex items-center space-x-2 text-xs text-slate-600 bg-white p-3.5 rounded-2xl border border-slate-200 shadow-xs w-fit">
-                    <RefreshCw className="w-4 h-4 animate-spin text-indigo-600" />
+                    <RefreshCw className="w-4 h-4 animate-spin text-indigo-600" aria-hidden="true" />
                     <span>Cross-verifying citations against document embeddings...</span>
                   </div>
                 )}
@@ -806,14 +850,16 @@ export default function SplitScreenViewer({
                         ? "Puchhiye: 'Notice period kitna hai?'"
                         : "Ask about rights, termination, payment deadlines, liabilities..."
                     }
+                    aria-label="Ask questions about this legal document"
                     className="flex-1 text-xs px-4 py-3 rounded-xl border border-slate-200 focus:outline-hidden focus:border-indigo-500 text-slate-800 shadow-2xs font-medium"
                   />
                   <button
                     type="submit"
                     disabled={!chatInput.trim() || chatLoading}
+                    aria-label="Send question to document AI"
                     className="p-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white disabled:opacity-40 transition-colors shadow-xs"
                   >
-                    <Send className="w-4 h-4" />
+                    <Send className="w-4 h-4" aria-hidden="true" />
                   </button>
                 </form>
               </div>
@@ -822,11 +868,11 @@ export default function SplitScreenViewer({
 
           {/* Tab 7: Visual Intelligence Graph */}
           {activeTab === "graph" && (
-            <div className="flex-1 p-5 overflow-y-auto space-y-4 bg-slate-50/50">
+            <div id="panel-graph" role="tabpanel" aria-labelledby="tab-graph" className="flex-1 p-5 overflow-y-auto space-y-4 bg-slate-50/50">
               <ContractNetworkGraph document={doc} onJumpToPage={jumpToPage} />
             </div>
           )}
-        </div>
+        </section>
       </div>
     </div>
   );

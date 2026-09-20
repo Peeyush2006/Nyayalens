@@ -8,10 +8,14 @@ export default function DisclaimerBanner() {
   if (dismissed) return null;
 
   return (
-    <div className="bg-amber-50/90 border-b border-amber-200 px-4 py-2 text-xs text-amber-900 flex items-center justify-between no-print">
+    <aside
+      role="region"
+      aria-label="Legal Notice Disclaimer"
+      className="bg-amber-50/90 border-b border-amber-200 px-4 py-2 text-xs text-amber-900 flex items-center justify-between no-print"
+    >
       <div className="flex items-center space-x-2 max-w-7xl mx-auto w-full justify-center text-center">
         <span className="font-semibold text-amber-950 flex items-center">
-          <AlertTriangle className="w-3.5 h-3.5 text-amber-700 mr-1.5" />
+          <AlertTriangle className="w-3.5 h-3.5 text-amber-700 mr-1.5" aria-hidden="true" />
           Legal Notice:
         </span>
         <p className="text-amber-900">
@@ -22,9 +26,10 @@ export default function DisclaimerBanner() {
         onClick={() => setDismissed(true)}
         className="text-amber-800 hover:text-amber-950 p-1 rounded transition-colors flex-shrink-0"
         title="Dismiss notice"
+        aria-label="Dismiss legal notice"
       >
-        <X className="w-3.5 h-3.5" />
+        <X className="w-3.5 h-3.5" aria-hidden="true" />
       </button>
-    </div>
+    </aside>
   );
 }

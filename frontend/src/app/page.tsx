@@ -258,8 +258,9 @@ export default function LandingPage() {
         onOpenLegalInfo={() => setShowLegalInfo(true)}
       />
 
-      {/* Hero Section */}
-      <section className="relative pt-16 pb-20 bg-white border-b border-slate-200">
+      <main id="main-content" role="main" tabIndex={-1} className="flex-1 focus:outline-hidden">
+        {/* Hero Section */}
+        <section className="relative pt-16 pb-20 bg-white border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
           {/* Main Title */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight font-serif leading-[1.15]">
@@ -596,10 +597,10 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
-      </section>
+      </main>
 
       {/* Footer */}
-      <footer className="bg-slate-950 text-slate-400 py-12 border-t border-slate-900 text-xs">
+      <footer role="contentinfo" className="bg-slate-950 text-slate-400 py-12 border-t border-slate-900 text-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-slate-800 pb-8">
             <div className="flex items-center space-x-3">

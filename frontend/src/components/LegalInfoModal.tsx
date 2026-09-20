@@ -35,35 +35,42 @@ export default function LegalInfoModal({ onClose }: LegalInfoModalProps) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="legal-info-title"
+      className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4"
+    >
       <div className="bg-white rounded-2xl shadow-2xl border border-slate-200 w-full max-w-4xl h-[85vh] flex flex-col overflow-hidden">
         {/* Header */}
         <div className="bg-slate-900 text-white px-6 py-4 flex items-center justify-between flex-shrink-0">
           <div className="flex items-center space-x-3">
             <div className="w-9 h-9 rounded-lg bg-indigo-500/30 flex items-center justify-center text-indigo-300">
-              <BookOpen className="w-5 h-5" />
+              <BookOpen className="w-5 h-5" aria-hidden="true" />
             </div>
             <div>
-              <h2 className="text-base font-bold">India Law Codex & Legal Principles</h2>
+              <h2 id="legal-info-title" className="text-base font-bold">India Law Codex & Legal Principles</h2>
               <p className="text-xs text-slate-300">Authoritative statutory frameworks and Supreme Court doctrines</p>
             </div>
           </div>
           <button
             onClick={onClose}
+            aria-label="Close legal info modal"
             className="p-1.5 rounded-lg hover:bg-slate-800 text-slate-400 hover:text-white transition-colors"
           >
-            <X className="w-5 h-5" />
+            <X className="w-5 h-5" aria-hidden="true" />
           </button>
         </div>
 
         {/* Search & Jurisdiction Selector */}
         <div className="bg-slate-50 border-b border-slate-200 px-6 py-3.5 flex flex-col sm:flex-row items-center justify-between gap-3 flex-shrink-0">
           <form onSubmit={handleSearch} className="flex-1 w-full relative">
-            <Search className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
+            <Search className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" aria-hidden="true" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
+              aria-label="Search legal doctrines and statutes"
               placeholder="Search legal doctrines (e.g., 'Indemnity', 'Non-compete Section 27', 'Force Majeure')..."
               className="w-full text-xs pl-9 pr-4 py-2 bg-white rounded-xl border border-slate-300 focus:outline-hidden focus:border-indigo-500 text-slate-800"
             />

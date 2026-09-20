@@ -48,24 +48,30 @@ export default function ContractComparisonModal({
   ) || [];
 
   return (
-    <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="comparison-dialog-title"
+      className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4"
+    >
       <div className="bg-white rounded-2xl shadow-2xl border border-slate-200 w-full max-w-5xl h-[85vh] flex flex-col overflow-hidden">
         {/* Modal Header */}
         <div className="bg-slate-900 text-white px-6 py-4 flex items-center justify-between flex-shrink-0">
           <div className="flex items-center space-x-3">
             <div className="w-9 h-9 rounded-lg bg-indigo-500/30 flex items-center justify-center text-indigo-300">
-              <FileDiff className="w-5 h-5" />
+              <FileDiff className="w-5 h-5" aria-hidden="true" />
             </div>
             <div>
-              <h2 className="text-base font-bold">Contract Comparison Engine</h2>
+              <h2 id="comparison-dialog-title" className="text-base font-bold">Contract Comparison Engine</h2>
               <p className="text-xs text-slate-300">Side-by-side redline & semantic change analysis</p>
             </div>
           </div>
           <button
             onClick={onClose}
+            aria-label="Close contract comparison modal"
             className="p-1.5 rounded-lg hover:bg-slate-800 text-slate-400 hover:text-white transition-colors"
           >
-            <X className="w-5 h-5" />
+            <X className="w-5 h-5" aria-hidden="true" />
           </button>
         </div>
 
@@ -73,10 +79,11 @@ export default function ContractComparisonModal({
         <div className="bg-slate-50 border-b border-slate-200 px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4 flex-shrink-0">
           <div className="flex items-center space-x-3 flex-1">
             <div className="flex-1">
-              <label className="block text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-1">
+              <label htmlFor="select-doc-a" className="block text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-1">
                 Document A (Baseline)
               </label>
               <select
+                id="select-doc-a"
                 value={docAId}
                 onChange={(e) => setDocAId(e.target.value)}
                 className="w-full text-xs bg-white border border-slate-300 rounded-lg px-3 py-2 text-slate-800 focus:outline-hidden focus:border-indigo-500"
@@ -90,14 +97,15 @@ export default function ContractComparisonModal({
             </div>
 
             <div className="pt-5 text-slate-400">
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4" aria-hidden="true" />
             </div>
 
             <div className="flex-1">
-              <label className="block text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-1">
+              <label htmlFor="select-doc-b" className="block text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-1">
                 Document B (Revised / Comparison)
               </label>
               <select
+                id="select-doc-b"
                 value={docBId}
                 onChange={(e) => setDocBId(e.target.value)}
                 className="w-full text-xs bg-white border border-slate-300 rounded-lg px-3 py-2 text-slate-800 focus:outline-hidden focus:border-indigo-500"
