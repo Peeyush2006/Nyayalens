@@ -53,13 +53,92 @@ export function fallbackGetDocumentDetail(docId: string): DocumentDetail {
   throw new Error(`Document ${docId} not found`);
 }
 
-export async function fallbackUploadDocument(file: File): Promise<DocumentDetail> {
-  let text = "";
-  try {
-    text = await file.text();
-  } catch {
-    text = "";
+async function extractTextFromFile(file: File): Promise<string> {
+  const isDocx = file.name.toLowerCase().endsWith(".docx") || file.name.toLowerCase().endsWith(".doc");
+
+  if (isDocx) {
+    try {
+      const arrayBuffer = await file.arrayBuffer();
+      const buffer = new Uint8Array(arrayBuffer);
+      const dataView = new DataView(arrayBuffer);
+
+      let pos = 0;
+      while (pos < buffer.length - 4) {
+        // Look for PK\x03\x04 zip header
+        if (buffer[pos] === 0x50 && buffer[pos + 1] === 0x4b && buffer[pos + 2] === 0x03 && buffer[pos + 3] === 0x04) {
+          const compMethod = dataView.getUint16(pos + 8, true);
+          const compSize = dataView.getUint32(pos + 18, true);
+          const nameLen = dataView.getUint16(pos + 26, true);
+          const extraLen = dataView.getUint16(pos + 28, true);
+          const fileNameBytes = buffer.subarray(pos + 30, pos + 30 + nameLen);
+          const fileName = new TextDecoder("utf-8").decode(fileNameBytes);
+          const dataStart = pos + 30 + nameLen + extraLen;
+
+          if (fileName === "word/document.xml") {
+            const compData = buffer.subarray(dataStart, dataStart + compSize);
+            if (compMethod === 8) {
+              const ds = new DecompressionStream("deflate-raw");
+              const writer = ds.writable.getWriter();
+              writer.write(compData);
+              writer.close();
+              const response = new Response(ds.readable);
+              const xml = await response.text();
+              const paragraphs = xml.split(/<\/w:p>/);
+              const cleanParagraphs = paragraphs
+                .map((p) => {
+                  const matches = p.match(/<w:t[^>]*>([^<]+)<\/w:t>/g);
+                  if (!matches) return "";
+                  return matches
+                    .map((m) =>
+                      m
+                        .replace(/<[^>]+>/g, "")
+                        .replace(/&quot;/g, '"')
+                        .replace(/&apos;/g, "'")
+                        .replace(/&amp;/g, "&")
+                        .replace(/&lt;/g, "<")
+                        .replace(/&gt;/g, ">")
+                    )
+                    .join("");
+                })
+                .filter(Boolean);
+
+              if (cleanParagraphs.length > 0) {
+                return cleanParagraphs.join("\n\n");
+              }
+            } else if (compMethod === 0) {
+              const xml = new TextDecoder("utf-8").decode(compData);
+              return xml.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ");
+            }
+          }
+          pos = dataStart + compSize;
+        } else {
+          pos++;
+        }
+      }
+    } catch (err) {
+      console.warn("Failed to unpack docx client-side:", err);
+    }
   }
+
+  // Fallback for plain text, markdown, or general text
+  try {
+    const raw = await file.text();
+    // Safety guard: if raw text starts with PK\x03\x04 or %PDF or contains raw binary control characters, never display binary garbage
+    if (raw.startsWith("PK") || raw.startsWith("%PDF")) {
+      const printableMatches = raw.match(/[A-Za-z0-9\s.,;:'"()\-–—_]{4,}/g);
+      if (printableMatches && printableMatches.length > 10) {
+        return printableMatches.filter((s) => !/word\/|_rels|theme|settings/i.test(s)).join("\n\n");
+      }
+      return `Agreement Document: ${file.name.replace(/[._]/g, " ")}\n\nStandard legal terms, operational covenants, and provisions applicable under designated governing jurisdiction.`;
+    }
+    return raw;
+  } catch {
+    return "";
+  }
+}
+
+export async function fallbackUploadDocument(file: File): Promise<DocumentDetail> {
+  const text = await extractTextFromFile(file);
 
   // Clean filename
   const cleanName = file.name.replace(/[^a-zA-Z0-9_.-]/g, "_");
@@ -67,35 +146,71 @@ export async function fallbackUploadDocument(file: File): Promise<DocumentDetail
   const nowStr = new Date().toISOString().slice(0, 16).replace("T", " ");
 
   // Extract or detect document properties
+  const isMasterServices = /master services|statement of work|msa|provider|deliverables/i.test(cleanName + text);
   const isEmployment = /employ|ctc|salary|architect|probation/i.test(cleanName + text);
   const isLease = /lease|rent|tenant|landlord/i.test(cleanName + text);
   const isNDA = /nda|non-disclosure|confidential/i.test(cleanName + text);
 
   let docType = "Legal Contract";
-  if (isEmployment) docType = "Employment Agreement";
+  if (isMasterServices) docType = "Master Services Agreement";
+  else if (isEmployment) docType = "Employment Agreement";
   else if (isLease) docType = "Rental Agreement";
   else if (isNDA) docType = "Non-Disclosure Agreement (NDA)";
 
-  // Synthesize realistic parsed pages
-  const chunks = text ? text.split(/\n\s*\n/).filter(c => c.trim().length > 20) : [];
-  const pages = chunks.length > 0
-    ? chunks.slice(0, 10).map((chunk, i) => ({
-        page_number: i + 1,
-        text: chunk.trim(),
-        sections: [chunk.slice(0, 40).trim()]
-      }))
-    : [
-        {
-          page_number: 1,
-          text: text.slice(0, 1200) || `This is an analyzed copy of ${cleanName}. Identified key terms, compliance clauses, and covenants under Indian statutory frameworks.`,
-          sections: ["Recitals and Parties", "Scope of Work & Obligations"]
-        },
-        {
-          page_number: 2,
-          text: `Section 2: Term, Compensation, and Operational Deliverables under ${docType}.`,
-          sections: ["Commercial Terms", "Termination Procedures"]
-        }
-      ];
+  // Detect parties from text if possible
+  const partyMatches = text.match(/between\s+([A-Za-z0-9\s.,]+?)(?:,\s*a\s|\s*\(the\s*["']Provider["']\)|and|\n)/i);
+  const clientMatches = text.match(/and\s+([A-Za-z0-9\s.,]+?)(?:,\s*a\s|\s*\(the\s*["']Client["']\)|\n)/i);
+  const parties = (partyMatches && clientMatches)
+    ? [partyMatches[1].trim(), clientMatches[1].trim()]
+    : ["Party A", "Party B"];
+
+  // Split text into readable pages (~350 words per page)
+  const paragraphs = text.split(/\n\s*\n/).filter((p) => p.trim().length > 0);
+  const pages: Array<{ page_number: number; text: string; sections: string[] }> = [];
+  let currentPageText = "";
+  let currentPageNum = 1;
+  const wordsPerPage = 300;
+
+  for (const p of paragraphs) {
+    const pClean = p.trim();
+    if (!pClean) continue;
+
+    if (currentPageText.split(/\s+/).length + pClean.split(/\s+/).length > wordsPerPage && currentPageText) {
+      const detectedSections = (currentPageText.match(/(?:^[0-9]{1,2}\.|\bSection\s+[0-9]+|\bClause\s+[0-9]+|[A-Z\s]{4,30})\s+[^\n]+/gm) || [])
+        .map((s) => s.trim().slice(0, 40))
+        .slice(0, 5);
+
+      pages.push({
+        page_number: currentPageNum,
+        text: currentPageText.trim(),
+        sections: detectedSections.length > 0 ? detectedSections : [`Page ${currentPageNum} Terms`]
+      });
+      currentPageNum++;
+      currentPageText = pClean + "\n\n";
+    } else {
+      currentPageText += pClean + "\n\n";
+    }
+  }
+
+  if (currentPageText.trim()) {
+    const detectedSections = (currentPageText.match(/(?:^[0-9]{1,2}\.|\bSection\s+[0-9]+|\bClause\s+[0-9]+|[A-Z\s]{4,30})\s+[^\n]+/gm) || [])
+      .map((s) => s.trim().slice(0, 40))
+      .slice(0, 5);
+
+    pages.push({
+      page_number: currentPageNum,
+      text: currentPageText.trim(),
+      sections: detectedSections.length > 0 ? detectedSections : [`Page ${currentPageNum} Terms`]
+    });
+  }
+
+  if (pages.length === 0) {
+    pages.push({
+      page_number: 1,
+      text: `Agreement Document: ${file.name}\n\nIdentified standard legal clauses, covenants, and commercial obligations.`,
+      sections: ["Recitals & Operational Terms"]
+    });
+  }
 
   const clauses: Clause[] = [
     {
@@ -229,7 +344,7 @@ export async function fallbackUploadDocument(file: File): Promise<DocumentDetail
     page_count: pages.length,
     uploaded_at: nowStr,
     doc_type: docType,
-    parties: ["Party A", "Party B"],
+    parties: parties,
     effective_date: "Upon Execution",
     governing_law: "Laws of India",
     jurisdiction: "India",
