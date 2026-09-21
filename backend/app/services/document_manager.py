@@ -44,7 +44,7 @@ class DocumentManager:
             cur_text = ""
             cur_page = 1
             for sec in sections:
-                sec_clean = ("SECTION " + sec if not sec.startswith("TECHFLOW") and not sec.startswith("RESIDENTIAL") and not sec.startswith("MUTUAL") and not sec.startswith("ENTERPRISE") else sec).strip()
+                sec_clean = ("SECTION " + sec if not sec.startswith("TECHFLOW") and not sec.startswith("RESIDENTIAL") and not sec.startswith("MUTUAL") and not sec.startswith("ENTERPRISE") else sec)
                 if len(cur_text) + len(sec_clean) > 800 and cur_text:
                     pages_content.append(DocumentPageContent(
                         page_number=cur_page,
