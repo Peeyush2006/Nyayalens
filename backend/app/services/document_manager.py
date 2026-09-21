@@ -1,8 +1,9 @@
+from __future__ import annotations
 import re
 import uuid
 import datetime
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional, Tuple, Any
 from app.core.config import settings
 from app.models.schemas import (
     DocumentDetail, DocumentMetadata, DocumentPageContent,
