@@ -232,11 +232,13 @@ class DocumentManager:
 
     def _extract_parties(self, text: str) -> List[str]:
         # Preamble regex for corporate and individual contracting entities
-        preamble_match = re.search(
-            r"between\s+([A-Z][A-Za-z0-9\s.,&]+?),\s*(?:a\s+company|an?\s+individual|having|incorporated|\(the).*?\band\s+([A-Z][A-Za-z0-9\s.,&]+?),\s*(?:a\s+company|an?\s+individual|having|incorporated|\(the)",
-            text,
-            re.IGNORECASE | re.DOTALL
+        party_pattern = (
+            r"between\s+([A-Z][A-Za-z0-9\s.,&]+?),\s*"
+            r"(?:a\s+company|an?\s+individual|having|incorporated|\(the)"
+            r".*?\band\s+([A-Z][A-Za-z0-9\s.,&]+?),\s*"
+            r"(?:a\s+company|an?\s+individual|having|incorporated|\(the)"
         )
+        preamble_match = re.search(party_pattern, text, re.IGNORECASE | re.DOTALL)
         if preamble_match:
             p1 = preamble_match.group(1).strip(" \t\n\r,;")
             p2 = preamble_match.group(2).strip(" \t\n\r,;")
