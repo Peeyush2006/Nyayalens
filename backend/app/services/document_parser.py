@@ -79,64 +79,95 @@ class DocumentParser:
     @staticmethod
     def _parse_docx(file_path: Path) -> Tuple[List[DocumentPageContent], int, str]:
         full_text = ""
+        full_paragraphs = []
         try:
             doc = DocxDocument(str(file_path))
-            full_paragraphs = [p.text for p in doc.paragraphs if p.text.strip()]
+            full_paragraphs = [p.text.strip() for p in doc.paragraphs if p.text.strip()]
             full_text = "\n\n".join(full_paragraphs)
         except Exception:
             try:
                 with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
                     full_text = f.read()
+                    full_paragraphs = [p.strip() for p in full_text.split("\n\n") if p.strip()]
             except Exception:
                 full_text = f"Document: {file_path.name}"
+                full_paragraphs = [full_text]
         
-        # Simulate pages (~500 words per page)
-        words = full_text.split()
-        words_per_page = 450
-        page_chunks = []
-        for i in range(0, max(len(words), 1), words_per_page):
-            chunk = " ".join(words[i:i + words_per_page])
-            page_chunks.append(chunk)
-        
-        if not page_chunks:
-            page_chunks = [full_text or "Empty Document"]
-            
+        # Paginate while preserving paragraphs (\n\n)
+        words_per_page = 400
         pages_content = []
-        for idx, chunk in enumerate(page_chunks):
-            sections = DocumentParser._detect_sections(chunk)
+        cur_page_paras = []
+        cur_word_count = 0
+        
+        for p in full_paragraphs:
+            w = len(p.split())
+            if cur_word_count + w > words_per_page and cur_page_paras:
+                page_text = "\n\n".join(cur_page_paras)
+                pages_content.append(DocumentPageContent(
+                    page_number=len(pages_content) + 1,
+                    text=page_text,
+                    sections=DocumentParser._detect_sections(page_text)
+                ))
+                cur_page_paras = [p]
+                cur_word_count = w
+            else:
+                cur_page_paras.append(p)
+                cur_word_count += w
+                
+        if cur_page_paras:
+            page_text = "\n\n".join(cur_page_paras)
             pages_content.append(DocumentPageContent(
-                page_number=idx + 1,
-                text=chunk,
-                sections=sections
+                page_number=len(pages_content) + 1,
+                text=page_text,
+                sections=DocumentParser._detect_sections(page_text)
             ))
             
-        return pages_content, len(page_chunks), full_text
+        if not pages_content:
+            pages_content = [DocumentPageContent(page_number=1, text=full_text, sections=[])]
+            
+        return pages_content, len(pages_content), full_text
 
     @staticmethod
     def _parse_text(file_path: Path) -> Tuple[List[DocumentPageContent], int, str]:
         with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
             full_text = f.read()
             
-        words = full_text.split()
-        words_per_page = 450
-        page_chunks = []
-        for i in range(0, max(len(words), 1), words_per_page):
-            chunk = " ".join(words[i:i + words_per_page])
-            page_chunks.append(chunk)
+        full_paragraphs = [p.strip() for p in re.split(r"(?:\r?\n){2,}|(?=\n(?:Section|Clause|Article|[0-9]{1,2}\.))", full_text, flags=re.I) if p.strip()]
+        if not full_paragraphs:
+            full_paragraphs = [full_text]
             
-        if not page_chunks:
-            page_chunks = [full_text or "Empty Document"]
-            
+        words_per_page = 400
         pages_content = []
-        for idx, chunk in enumerate(page_chunks):
-            sections = DocumentParser._detect_sections(chunk)
+        cur_page_paras = []
+        cur_word_count = 0
+        
+        for p in full_paragraphs:
+            w = len(p.split())
+            if cur_word_count + w > words_per_page and cur_page_paras:
+                page_text = "\n\n".join(cur_page_paras)
+                pages_content.append(DocumentPageContent(
+                    page_number=len(pages_content) + 1,
+                    text=page_text,
+                    sections=DocumentParser._detect_sections(page_text)
+                ))
+                cur_page_paras = [p]
+                cur_word_count = w
+            else:
+                cur_page_paras.append(p)
+                cur_word_count += w
+                
+        if cur_page_paras:
+            page_text = "\n\n".join(cur_page_paras)
             pages_content.append(DocumentPageContent(
-                page_number=idx + 1,
-                text=chunk,
-                sections=sections
+                page_number=len(pages_content) + 1,
+                text=page_text,
+                sections=DocumentParser._detect_sections(page_text)
             ))
             
-        return pages_content, len(page_chunks), full_text
+        if not pages_content:
+            pages_content = [DocumentPageContent(page_number=1, text=full_text, sections=[])]
+            
+        return pages_content, len(pages_content), full_text
 
     @staticmethod
     def _detect_sections(text: str) -> List[str]:

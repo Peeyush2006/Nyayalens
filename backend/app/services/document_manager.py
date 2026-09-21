@@ -1,3 +1,4 @@
+import re
 import uuid
 import datetime
 from pathlib import Path
@@ -208,13 +209,15 @@ class DocumentManager:
     def _detect_document_type(self, filename: str, text: str) -> str:
         fn = filename.lower()
         t = text.lower()
-        if "employ" in fn or "offer letter" in fn or "employment agreement" in t or "ctc" in t:
+        if "master services" in fn or "master services" in t or "msa" in fn:
+            return "Master Services Agreement (MSA)"
+        elif "employ" in fn or "offer letter" in fn or "employment agreement" in t or "ctc" in t:
             return "Employment Contract"
         elif "lease" in fn or "rent" in fn or "tenancy" in fn or "residential lease" in t:
             return "Rental Agreement"
-        elif "nda" in fn or "non-disclosure" in fn or "proprietary information" in t:
+        elif "nda" in fn or "non-disclosure" in fn or "confidentiality agreement" in t or "proprietary information" in t:
             return "Non-Disclosure Agreement (NDA)"
-        elif "saas" in fn or "service agreement" in fn or "sla" in fn or "cloud platform" in t:
+        elif "saas" in fn or "service agreement" in fn or "services agreement" in fn or "services agreement" in t or "sla" in fn or "cloud platform" in t:
             return "SaaS Service Agreement"
         elif "loan" in fn or "borrower" in t or "lender" in t:
             return "Loan Agreement"
@@ -224,18 +227,29 @@ class DocumentManager:
             return "Privacy Policy"
         elif "terms" in fn or "terms of service" in t:
             return "Terms & Conditions"
-        return "Legal Document"
+        return "Legal Agreement"
 
     def _extract_parties(self, text: str) -> List[str]:
-        # Simple extraction heuristic for preambles
+        # Preamble regex for corporate and individual contracting entities
+        preamble_match = re.search(
+            r"between\s+([A-Z][A-Za-z0-9\s.,&]+?),\s*(?:a\s+company|an?\s+individual|having|incorporated|\(the).*?\band\s+([A-Z][A-Za-z0-9\s.,&]+?),\s*(?:a\s+company|an?\s+individual|having|incorporated|\(the)",
+            text,
+            re.IGNORECASE | re.DOTALL
+        )
+        if preamble_match:
+            p1 = preamble_match.group(1).strip(" \t\n\r,;")
+            p2 = preamble_match.group(2).strip(" \t\n\r,;")
+            if 3 < len(p1) < 80 and 3 < len(p2) < 80:
+                return [p1, p2]
+
         parties = []
         if "between" in text.lower():
             lines = text.split("\n")
-            for line in lines[:25]:
+            for line in lines[:35]:
                 l = line.strip()
-                if any(k in l.upper() for k in ["LIMITED", "PVT", "INC", "MR.", "MS.", "COMPANY", "EMPLOYEE", "LESSOR", "LESSEE"]):
-                    clean_p = l.replace("BY AND BETWEEN:", "").replace("AND", "").strip(" ;:,")
-                    if len(clean_p) > 4 and len(clean_p) < 80:
+                if any(k in l.upper() for k in ["LIMITED", "PVT", "INC", "LLC", "CORP", "MR.", "MS.", "COMPANY", "EMPLOYEE", "LESSOR", "LESSEE"]):
+                    clean_p = re.sub(r"^(?:BY AND BETWEEN|BETWEEN|AND)\s*[:,-]?\s*", "", l, flags=re.I).strip(" ;:,")
+                    if len(clean_p) > 4 and len(clean_p) < 80 and not clean_p.upper().startswith("SECTION"):
                         parties.append(clean_p)
         return list(dict.fromkeys(parties))[:3] or ["Party A", "Party B"]
 
