@@ -2,7 +2,7 @@ import re
 import uuid
 import datetime
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 from app.core.config import settings
 from app.models.schemas import (
     DocumentDetail, DocumentMetadata, DocumentPageContent,
@@ -43,7 +43,7 @@ class DocumentManager:
             cur_text = ""
             cur_page = 1
             for sec in sections:
-                sec_clean = ("SECTION " + sec if not sec.startswith("TECHFLOW") and not sec.startswith("RESIDENTIAL") and not sec.startswith("MUTUAL") and not sec.startswith("ENTERPRISE") else sec).strip()
+                sec_clean = ("SECTION " + sec if not sec.startswith("TECHFLOW") and not sec.startswith("RESIDENTIAL") and not sec.startswith("MUTUAL") and not sec.startswith("ENTERPRISE") else sec)
                 if len(cur_text) + len(sec_clean) > 800 and cur_text:
                     pages_content.append(DocumentPageContent(
                         page_number=cur_page,
@@ -232,7 +232,7 @@ class DocumentManager:
     def _extract_parties(self, text: str) -> List[str]:
         # Preamble regex for corporate and individual contracting entities
         preamble_match = re.search(
-            r"between\s+([A-Z][A-Za-z0-9\s.,&]+?),\s*(?:a\s+company|an?\s+individual|having|incorporated|\(the).*?\band\s+([A-Z][A-Za-z0-9\s.,&]+?),\s*(?:a\s+company|an?\s+individual|having|incorporated|\(the)",
+            r"between\s+([A-Z][A-Za-z0-9\s.,&]+?),\s*(?:a\s+company|an?\s+individual|having|incorporated|\(the).*?\band\s+([A-Z][A-Za-z0-9\s.,&]+?),\s*(?:a\s+company|an?\s+individual|having|incor[...]
             text,
             re.IGNORECASE | re.DOTALL
         )
